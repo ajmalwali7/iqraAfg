@@ -1,0 +1,80 @@
+{
+  "lang": "da",
+  "navbar": {
+    "login": "ورود",
+    "signup": "ثبت نام",
+    "logout": "خروج",
+    "myProfile": "پروفایل من",
+    "setting": "تنظیمات"
+  },
+  "layout": {
+    "verifLinkSent": "!لینک تایید به ایمیل شما ارسال شد",
+    "clickHere": "اینجا کلیک کنید",
+    "verifLinkNotRecieved": "!اگر آن را دریافت نکرده اید",
+    "checkEmail": "لطفا ایمیل خود را برای لینک تأیید بررسی کنید! یا",
+    "recieveVerifLink": "برای دریافت لینک تایید",
+    "home": "خانه",
+    "courses": "دروس",
+    "books": "کتابها",
+    "teachers": "استادها",
+    "createCourse": "درس جدید"
+  },
+  "loginPage": {
+    "incorrectCreds": "!ایمیل یا رمز عبور نادرست است",
+    "errorLoggingIn": "!خطایی رخ داد. لطفا بعدا امتحان نمایید",
+    "email": "ایمیل",
+    "password": "رمز عبور",
+    "login": "ورود"
+  },
+  "signupPage": {
+    "firstName": "اسم",
+    "lastName": "تخلص",
+    "female": "زن",
+    "male": "مرد",
+    "emailSigned": "!ایمیل ثبت شده است",
+    "email": "ایمیل",
+    "phoneNo": "نمبر مبایل",
+    "next": "بعدی",
+    "student": "متعلم",
+    "teacher": "معلم",
+    "class": "صنف",
+    "address": "آدرس",
+    "streetAdd": "آدرس ناحیه",
+    "city": "شهر",
+    "province": "ولایت",
+    "back": "بازگشت",
+    "password": "رمز",
+    "conPassword": "تایید رمز",
+    "signup": "ثبت نام",
+    "passEConPass": "رمز و تأیید رمز باید یکسان باشند",
+    "specChars": "+,*,$,@... رمز باید دارای یک کاراکتر خاص باشد مانند",
+    "numsInc": "0-9 رمز عبور باید شامل یک عدد باشد مانند",
+    "eightChars": "رمز باید 8 کاراکتر یا بیشتر باشد",
+    "star": "*",
+    "starText1": "خانه های ستاره دار",
+    "starText2": "باید پر گردد"
+  },
+  "createCoursePage": {
+    "vidLink": "لینک ویدیو",
+    "link": "لینک",
+    "vidUpload": "ویدیو بالا کنید",
+    "courseVid": "ویدیوی درسی",
+    "class": "صنف",
+    "subject": "مضمون",
+    "title": "عنوان درس",
+    "description": "توضیح درس",
+    "create": "بسازید",
+    "star": "*",
+    "starText1": "خانه های ستاره دار",
+    "starText2": "باید پر گردد",
+    "courseCreated": "!درس با موفقیت ایجاد شد",
+    "enterValidLink": "!لطفا یک لینک درست ویدیوی یوتیوب را وارد کنید",
+    "enterVideo": "!لطفا یک ویدیو آپلود کنید",
+    "descPlace": "!لطفا درس را به طور کامل توضیح دهید تا هر متعلم بتواند به راحتی آن را درک کند"
+  },
+  "missingPage": {
+    "notFound": "404! صفحه یافت نشد",
+    "redirectHome": "اگر می خواهید به صفحه اصلی بروید",
+    "here": "اینجا کلیک کنید"
+  }
+}
