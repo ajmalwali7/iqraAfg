@@ -5,7 +5,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 export function CourseCard(props) {
   return (
     <a href={`/course/${props.course.slug}`}>
-      <div className="card bg-secondary text-accent cursor-pointer p-4 hover:opacity-80 h-fit">
+      <div className="card bg-secondary text-accent cursor-pointer p-4 hover:opacity-80 hover:shadow-md h-fit">
         <div className="flex justify-between">
           <div>
             <h1 className="card-title">

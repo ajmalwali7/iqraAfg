@@ -185,7 +185,7 @@ export function Settings() {
   return (
     <>
       <div className="flex justify-center mt-10 mb-20">
-        <div className="flex flex-row card bg-accent glass py-7 w-10/12 px-5 gap-3">
+        <div className="flex flex-row card bg-accent shadow-xl py-7 w-10/12 px-5 gap-3">
           <div className="flex flex-col pt-8 pl-8 items-center justify-start gap-y-4 w-2/5">
             <div className="avatar">
               <div className="w-28 rounded-full cursor-pointer outline outline-2 outline-primary">

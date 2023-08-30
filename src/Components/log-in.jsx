@@ -156,7 +156,7 @@ export function Login() {
         <div className="flex flex-col w-[55%] h-full justify-center items-center">
           {!forgotPassword ? (
             <form onSubmit={handleForm1} className="w-9/12">
-              <div className="flex flex-col card bg-accent glass w-full py-4 px-5 h-fit">
+              <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
                     <img src="/imgs/logo/light-logo.png" />
@@ -241,7 +241,7 @@ export function Login() {
             </form>
           ) : !tokenSent ? (
             <form onSubmit={sendReset} className="w-9/12">
-              <div className="flex flex-col card bg-accent glass w-full py-4 px-5 h-fit">
+              <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
                     <img src="/imgs/logo/light-logo.png" />
@@ -297,7 +297,7 @@ export function Login() {
             </form>
           ) : (
             <form onSubmit={resetPassword} className="w-9/12">
-              <div className="flex flex-col card bg-accent glass w-full py-4 px-5 h-fit">
+              <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
                     <img src="/imgs/logo/light-logo.png" />

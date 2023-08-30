@@ -42,7 +42,7 @@ export function Teachers() {
   return (
     <>
       {logged && teachers && (
-        <div className="text-primary card card-bordered border-secondary m-11 p-9 bg-accent overflow-x-hidden">
+        <div className="text-primary card shadow-xl m-11 p-9 bg-accent overflow-x-hidden">
           <h1 className=" card-title text-3xl mb-9 rtl:justify-self-end">
             {teacher}
           </h1>

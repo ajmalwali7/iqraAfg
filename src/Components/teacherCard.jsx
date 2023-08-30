@@ -3,7 +3,7 @@
 export function TeacherCard(props) {
   return (
     <a href={`/user/${props.teacher.userID}`}>
-      <div className="card bg-secondary text-accent cursor-pointer p-4 hover:opacity-80">
+      <div className="card bg-secondary text-accent cursor-pointer p-4 hover:opacity-80 hover:shadow-inner">
         <div className="flex gap-2">
           <div className="avatar">
             <div className="w-14 h-14 rounded-full outline outline-2 outline-primary">

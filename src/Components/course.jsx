@@ -145,7 +145,7 @@ export function Course() {
           </div>
         )}
         {course && (
-          <div className="flex flex-col card bg-accent glass py-7 w-10/12 px-5 gap-3">
+          <div className="flex flex-col card bg-accent shadow-xl py-7 w-10/12 px-5 gap-3">
             <div className="flex flex-col pt-8 gap-y-4 w-full">
               <div className="flex flex-col gap-y-2">
                 <span className="text-3xl block text-primary-focus font-semibold px-3">

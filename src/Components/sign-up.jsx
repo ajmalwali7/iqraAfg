@@ -132,7 +132,7 @@ export function Signup() {
         <div className="flex flex-col w-[55%] h-full justify-center items-center">
           {form1 && (
             <form onSubmit={handleForm1} className="w-9/12">
-              <div className="flex flex-col card bg-accent glass w-full py-4 px-5 h-fit">
+              <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
                     <img src="/imgs/logo/light-logo.png" />
@@ -231,7 +231,7 @@ export function Signup() {
           )}
           {form2 && (
             <form onSubmit={handleForm2} className="w-9/12">
-              <div className="flex flex-col card bg-accent glass py-7 w-full px-5 h-fit">
+              <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
                     <img src="/imgs/logo/light-logo.png" />
@@ -341,7 +341,7 @@ export function Signup() {
           )}
           {form3 && (
             <form onSubmit={handleForm3} className="w-9/12">
-              <div className="flex flex-col card  bg-accent glass py-7 w-full px-5 h-fit">
+              <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
                     <img src="/imgs/logo/light-logo.png" />

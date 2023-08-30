@@ -213,7 +213,7 @@ export function CreateCourse() {
         user.teachVerified && (
           <div className="flex justify-center">
             <form onSubmit={uploadCourse} className="w-9/12 h-fit mt-9 mb-20">
-              <div className="flex flex-col card bg-accent glass py-7 w-full px-5 h-fit">
+              <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
                     <img src="/imgs/logo/light-logo.png" />
