@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 import { Navbar } from "./navbar";
 import { Background } from "./background";
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { useState } from "react";
 import axios from "axios";
 // import { Drawer } from "./drawer";
@@ -100,25 +102,45 @@ export function Layout() {
           </div>
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className="menu shadow-md p-5 text-base w-72 h-[90vh] bg-accent text-primary fixed">
+            <ul className="menu flex flex-col justify-between shadow-md p-5 text-base w-72 h-[90vh] bg-accent text-primary fixed">
               {/* Sidebar content here */}
-              <li className="rounded-lg m-2">
-                <a href="/">{layout.home}</a>
-              </li>
-              <li className="rounded-lg m-2">
-                <a href="/courses">{layout.courses}</a>
-              </li>
-              <li className="rounded-lg m-2">
-                <a href="/books">{layout.books}</a>
-              </li>
-              <li className="rounded-lg m-2">
-                <a href="/teachers">{layout.teachers}</a>
-              </li>
-              {(user.role === "teacher" || user.role === "admin") && (
+              <ul>
                 <li className="rounded-lg m-2">
-                  <a href="/create-course">{layout.createCourse}</a>
+                  <a href="/">{layout.home}</a>
                 </li>
-              )}
+                <li className="rounded-lg m-2">
+                  <a href="/courses">{layout.courses}</a>
+                </li>
+                <li className="rounded-lg m-2">
+                  <a href="/books">{layout.books}</a>
+                </li>
+                <li className="rounded-lg m-2">
+                  <a href="/teachers">{layout.teachers}</a>
+                </li>
+                {(user.role === "teacher" || user.role === "admin") && (
+                  <li className="rounded-lg m-2">
+                    <a href="/create-course">{layout.createCourse}</a>
+                  </li>
+                )}
+              </ul>
+              <ul className="mb-5">
+                <li className="flex flex-row">
+                  <a className="p-0" href="/privcy-policy">
+                    <span className="m-2 text-xs">{layout.privacyPolicy}</span>
+                  </a>
+                  <a className="p-0" href="/terms-conditions">
+                    <span className="m-2 text-xs">
+                      {layout.termsConditions}
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <span className="m-2 mb-0 text-md p-0 hover:cursor-auto hover:text-primary items-center">
+                    <FontAwesomeIcon icon={faCopyright} />
+                    2023 IQRA AFGHANISTAN
+                  </span>
+                </li>
+              </ul>
             </ul>
           </div>
         </div>

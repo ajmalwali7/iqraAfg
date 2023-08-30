@@ -1,10 +1,7 @@
-import { noNav } from "../actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 export function Missing() {
-  const dispatch = useDispatch();
   const missingPage = useSelector((s) => s.lang.missingPage);
-  dispatch(noNav());
   return (
     <>
       <div>
