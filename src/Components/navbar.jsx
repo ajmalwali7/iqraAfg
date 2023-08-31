@@ -164,7 +164,7 @@ export function Navbar() {
                   <details className="dropdown dropdown-end z-[5000]">
                     <summary className="marker:content-none">
                       <div tabIndex={0} className="avatar">
-                        <div className="w-12 rounded-full cursor-pointer outline outline-2 outline-primary">
+                        <div className="w-12 rounded-full cursor-pointer border-2 border-accent hover:border-primary hover:border-opacity-60 transition-all">
                           <img
                             src={
                               user.photo
@@ -198,6 +198,38 @@ export function Navbar() {
           </div>
           <div className="navbar bg-accent h-[7vh] glass z-[9999] min-h-0 opacity-90 justify-between fixed lg:invisible visible">
             <div className="flex flex-row h-[7vh] w-full justify-between px-2">
+              {logged && (
+                <label
+                  htmlFor="my-drawer-2"
+                  className="swap swap-rotate btn btn-primary btn-circle btn-outline w-8 h-8 min-h-fit min-w-fit border-0"
+                  onClick={(e) => console.log(e)}
+                >
+                  {/* this hidden checkbox controls the state */}
+                  <input type="checkbox" />
+
+                  {/* hamburger icon */}
+                  <svg
+                    className="swap-off fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                  </svg>
+
+                  {/* close icon */}
+                  <svg
+                    className="swap-on fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 512 512"
+                  >
+                    <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                  </svg>
+                </label>
+              )}
               <div className="py-3 ">
                 <a
                   href="/"
@@ -216,7 +248,7 @@ export function Navbar() {
                   <details className="dropdown dropdown-end z-[5000]">
                     <summary className="marker:content-none">
                       <div tabIndex={0} className="avatar">
-                        <div className="w-8 rounded-full cursor-pointer outline outline-2 outline-primary">
+                        <div className="w-9 rounded-full">
                           <img
                             src={
                               user.photo

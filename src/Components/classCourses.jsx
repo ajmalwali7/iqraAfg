@@ -40,9 +40,11 @@ export function ClassCourses() {
   return (
     <>
       {logged && courses && (
-        <div className="text-primary card shadow-xl m-11 p-9 bg-accent overflow-x-hidden">
-          <h1 className=" card-title text-3xl mb-9">Courses:</h1>
-          <div className="grid grid-cols-3 gap-2 overflow-x-hidden">
+        <div className="text-primary card shadow-xl m-2 mb-10 lg:m-11 p-3 lg:p-9 bg-accent overflow-x-hidden">
+          <h1 className="card-title text-xl md:text-3xl mb-4 lg:mb-9">
+            Class {classe.class.slice(5)} Courses:
+          </h1>
+          <div className="grid grid-cols-3 gap-2 overflow-x-hidden h-0 md:h-fit invisible md:visible">
             <div className="flex flex-col gap-2">
               {courses
                 .filter((course) => courses.indexOf(course) % 3 == 0)
@@ -60,6 +62,22 @@ export function ClassCourses() {
             <div className="flex flex-col gap-2">
               {courses
                 .filter((course) => courses.indexOf(course) % 3 == 2)
+                .map((c) => {
+                  return <CourseCard key={courses.indexOf(c)} course={c} />;
+                })}
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-2 overflow-x-hidden h-fit md:h-0 visible md:invisible">
+            <div className="flex flex-col gap-2">
+              {courses
+                .filter((course) => courses.indexOf(course) % 2 == 0)
+                .map((c) => {
+                  return <CourseCard key={courses.indexOf(c)} course={c} />;
+                })}
+            </div>
+            <div className="flex flex-col gap-2">
+              {courses
+                .filter((course) => courses.indexOf(course) % 2 == 1)
                 .map((c) => {
                   return <CourseCard key={courses.indexOf(c)} course={c} />;
                 })}

@@ -10,7 +10,7 @@ export function MyHome() {
 
   dispatch(setNav());
   return (
-    <div className="bg-base-100 absolute w-[70vw]">
+    <div className="bg-base-100 absolute w-full lg:w-[70vw]">
       {!logged ? (
         <div
           className="hero w-screen lg:min-h-[90vh] min-h-[93vh] lg:mt-[10vh] mt-[7vh]"
@@ -33,30 +33,30 @@ export function MyHome() {
           </div>
         </div>
       ) : (
-        <div className="grid grid-cols-2 m-11 gap-5 max-w-3xl">
+        <div className="grid grid-cols-2 m-4 lg:m-11 gap-3 lg:gap-5 lg:max-w-3xl">
           <a href="/courses">
-            <div className="text-primary transition-all card shadow-xl h-28 p-9 items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
+            <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
               <h1 className=" text-xl font-medium">Courses</h1>
             </div>
           </a>
           <a href="/books">
-            <div className="text-primary transition-all card shadow-xl h-28 p-9 items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
+            <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
               <h1 className=" text-xl font-medium">Books</h1>
             </div>
           </a>
           <a href="/teachers">
-            <div className="text-primary transition-all card shadow-xl h-28 p-9 items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
+            <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
               <h1 className="text-xl font-medium">Teachers</h1>
             </div>
           </a>
           <a href="/my-settings">
-            <div className="text-primary transition-all card shadow-xl h-28 p-9 items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
+            <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
               <h1 className=" text-xl font-medium">Settings</h1>
             </div>
           </a>
           {(user.role === "teacher" || user.role === "admin") && (
             <a href="/create-course">
-              <div className="text-primary transition-all card shadow-xl h-28 p-9 items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
+              <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-white bg-accent overflow-x-hidden">
                 <h1 className=" text-xl font-medium">Create Course</h1>
               </div>
             </a>

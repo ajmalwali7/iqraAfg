@@ -5,10 +5,10 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 export function CourseCard(props) {
   return (
     <a href={`/course/${props.course.slug}`}>
-      <div className="card bg-secondary text-accent cursor-pointer p-4 hover:opacity-80 hover:shadow-md h-fit">
+      <div className="card rounded-xl lg:rounded-2xl bg-secondary text-accent cursor-pointer p-2 lg:p-4 hover:opacity-80 hover:shadow-md h-fit">
         <div className="flex justify-between">
           <div>
-            <h1 className="card-title">
+            <h1 className="card-title text-sm lg:text-xl">
               {`${props.course.title}`[0].toUpperCase() +
                 `${props.course.title}`.substring(1)}
             </h1>
@@ -23,9 +23,9 @@ export function CourseCard(props) {
               </div>
             </div>
           </div>
-          <p className="text-5xl font-medium">{`${props.course.class}`}</p>
+          <p className="text-3xl lg:text-5xl font-medium">{`${props.course.class}`}</p>
         </div>
-        <p className="card-body py-5 px-0 text-sm">
+        <p className="card-body py-2 lg:py-5 px-0 text-sm">
           {`${props.course.description}`.substring(0, 150)}
         </p>
         <div className="flex flex-col text-xs">

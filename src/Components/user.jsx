@@ -67,7 +67,7 @@ export function User() {
           </div>
         )}
         {noUser && (
-          <div className="flex flex-col pt-8 gap-y-4 items-center justify-center">
+          <div className="flex flex-col pt-5 lg:pt-8 gap-y-4 items-center justify-center">
             <div className="flex items-center alert alert-error m-1 w-fit opacity-75">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -98,8 +98,8 @@ export function User() {
           </div>
         )}
         {user && (
-          <div className="flex flex-row justify-center card bg-accent shadow-xl py-7 w-10/12 px-5 gap-3">
-            <div className="flex flex-col pt-8 gap-y-4 items-center justify-center">
+          <div className="flex flex-row justify-center card bg-accent shadow-xl py-4 lg:py-7 w-11/12 lg:w-10/12 px-3 lg:px-5 gap-3">
+            <div className="flex flex-col pt-5 lg:pt-8 gap-y-4 items-center justify-center">
               <div className="avatar">
                 <div className="w-28 rounded-full cursor-pointer outline outline-2 outline-primary">
                   <img

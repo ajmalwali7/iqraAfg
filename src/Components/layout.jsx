@@ -37,7 +37,7 @@ export function Layout() {
       <Background />
       {!logged && <Outlet />}
       {logged && (
-        <div className="drawer lg:drawer-open mt-[10vh] h-[90vh]">
+        <div className="drawer lg:drawer-open mt-[7vh] lg:mt-[10vh] h-[93vh] lg:h-[90vh]">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content lg:pl-72 h-fit">
             {!user.credentialVerified && verifTokenSent && (
@@ -102,7 +102,7 @@ export function Layout() {
           </div>
           <div className="drawer-side">
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-            <ul className="menu flex flex-col justify-between shadow-md p-5 text-base w-72 h-[90vh] bg-accent text-primary fixed">
+            <ul className="menu flex flex-col justify-between shadow-md p-5 text-base mt-[7vh] lg:mt-0 w-56 md:w-72 lg:w-72 h-[93vh] lg:h-[90vh] bg-accent text-primary fixed">
               {/* Sidebar content here */}
               <ul>
                 <li className="rounded-lg m-2">
@@ -135,7 +135,7 @@ export function Layout() {
                   </a>
                 </li>
                 <li>
-                  <span className="m-2 mb-0 text-md p-0 hover:cursor-auto hover:text-primary items-center">
+                  <span className="m-2 mb-0 text-xs md:text-base p-0 hover:cursor-auto hover:text-primary items-center">
                     <FontAwesomeIcon icon={faCopyright} />
                     2023 IQRA AFGHANISTAN
                   </span>

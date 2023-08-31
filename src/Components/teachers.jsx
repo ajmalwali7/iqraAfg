@@ -42,11 +42,11 @@ export function Teachers() {
   return (
     <>
       {logged && teachers && (
-        <div className="text-primary card shadow-xl m-11 p-9 bg-accent overflow-x-hidden">
+        <div className="text-primary card shadow-xl mt-2 m-3 p-9 bg-accent overflow-x-hidden h-fit lg:mt-9 lg:m-11">
           <h1 className=" card-title text-3xl mb-9 rtl:justify-self-end">
             {teacher}
           </h1>
-          <div className="grid grid-cols-3 gap-2 overflow-x-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 overflow-x-hidden">
             {teachers &&
               teachers.map((teacher) => (
                 <TeacherCard
