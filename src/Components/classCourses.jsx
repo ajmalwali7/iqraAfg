@@ -33,11 +33,11 @@ export function ClassCourses() {
     }
   };
   useEffect(() => {
-    document.title = `Class ${classe.class.slice(5)} Courses: Iqra Afghanistan`;
     if (logged && !courses) {
       courseFunc();
     }
   }, []);
+  document.title = `Class ${classe.class.slice(5)} Courses: Iqra Afghanistan`;
   return (
     <>
       {logged && courses && (

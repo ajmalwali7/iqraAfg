@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/no-unescaped-entities */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -78,7 +78,7 @@ export function CreateCourse() {
       setIsLoading(false);
     }
   };
-  useEffect(() => (document.title = "Create Course: Iqra Afghanistan"), []);
+  document.title = "Create Course: Iqra Afghanistan";
   return (
     <>
       {!(logged || user) && (

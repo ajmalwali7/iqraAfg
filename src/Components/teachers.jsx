@@ -35,10 +35,10 @@ export function Teachers() {
     }
   };
   useEffect(() => {
-    document.title = "Teachers: Iqra Afghanistan";
     if (logged && !teachers) {
       courseFunc();
     }
+    document.title = "Teachers: Iqra Afghanistan";
   }, []);
   return (
     <>

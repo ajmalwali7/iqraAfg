@@ -1,10 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 export function Courses() {
   const logged = useSelector((store) => store.isLogged);
-  useEffect(() => (document.title = "Courses: Iqra Afghanistan"), []);
+  document.title = "Courses: Iqra Afghanistan";
   return (
     <>
       {logged && (

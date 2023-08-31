@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-constant-condition */
 /* eslint-disable react/no-unescaped-entities */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faX, faCheck } from "@fortawesome/free-solid-svg-icons";
@@ -113,11 +113,8 @@ export function Signup() {
       setIsLoading(false);
     }
   }
-  useEffect(() => {
-    dispatch(noNav());
-    document.title = "Courses: Iqra Afghanistan";
-  }, []);
-
+  dispatch(noNav());
+  document.title = "Courses: Iqra Afghanistan";
   return (
     <>
       <div className="flex flex-row w-screen h-screen">

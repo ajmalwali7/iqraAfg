@@ -177,11 +177,11 @@ export function Settings() {
   };
 
   useEffect(() => {
-    document.title = "Edit Profile";
     if (reqUpdateBody) {
       updateMe();
     }
   }, [reqUpdateBody]);
+  document.title = "Edit Profile";
   const user = useSelector((s) => s.user);
   return (
     <>
