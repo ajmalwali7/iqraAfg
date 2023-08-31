@@ -177,6 +177,7 @@ export function Settings() {
   };
 
   useEffect(() => {
+    document.title = "Edit Profile";
     if (reqUpdateBody) {
       updateMe();
     }

@@ -1,8 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 export function Books() {
   const logged = useSelector((store) => store.isLogged);
+  useEffect(() => (document.title = "Books: Iqra Afghanistan"), []);
   return (
     <>
       {logged && (

@@ -67,6 +67,7 @@ export function Course() {
         `http://localhost:3000/api/v1/courses/course/${handle.slug}`
       );
       dispatch(setCourse(res.data.data.course));
+      document.title = `${res.data.data.course.title}: Iqra Afghanistan`;
       setError(false);
       if (res.data.data.course === null) {
         setNoCourse(true);

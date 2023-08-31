@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 export function Missing() {
   const missingPage = useSelector((s) => s.lang.missingPage);
+  useEffect(() => (document.title = "Page Not Found"), []);
   return (
     <>
       <div>
