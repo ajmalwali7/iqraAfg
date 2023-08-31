@@ -202,7 +202,6 @@ export function Navbar() {
                 <label
                   htmlFor="my-drawer-2"
                   className="swap swap-rotate btn btn-primary btn-circle btn-outline w-8 h-8 min-h-fit min-w-fit border-0"
-                  onClick={(e) => console.log(e)}
                 >
                   {/* this hidden checkbox controls the state */}
                   <input type="checkbox" />
