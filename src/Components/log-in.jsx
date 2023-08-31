@@ -140,7 +140,7 @@ export function Login() {
   return (
     <>
       <div className="flex flex-row w-screen h-screen">
-        <div className=" w-[45%] bg-gradient-to-br from-primary to-secondary flex justify-center items-center">
+        <div className="invisible md:visible w-0 md:w-[45%] bg-gradient-to-br from-primary to-secondary flex justify-center items-center">
           <div className="w-4/5 bg-accent opacity-70 rounded-2xl flex flex-col gap-6 justify-center items-center py-5">
             <div className="avatar">
               <div className=" w-36 h-36 rounded">
@@ -153,9 +153,9 @@ export function Login() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col w-[55%] h-full justify-center items-center">
+        <div className="flex flex-col w-full md:w-[55%] h-full justify-center items-center">
           {!forgotPassword ? (
-            <form onSubmit={handleForm1} className="w-9/12">
+            <form onSubmit={handleForm1} className="w-11/12 md:w-9/12">
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
@@ -240,7 +240,7 @@ export function Login() {
               </div>
             </form>
           ) : !tokenSent ? (
-            <form onSubmit={sendReset} className="w-9/12">
+            <form onSubmit={sendReset} className="w-11/12 md:w-9/12">
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
@@ -296,7 +296,7 @@ export function Login() {
               </div>
             </form>
           ) : (
-            <form onSubmit={resetPassword} className="w-9/12">
+            <form onSubmit={resetPassword} className="w-11/12 md:w-9/12">
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
@@ -313,7 +313,7 @@ export function Login() {
                     {login.errorLoggingIn}
                   </span>
                 )}
-                <span className="alert alert-info text-white font-medium mb-2 h-8 p-0 pl-4 flex items-center">
+                <span className="alert alert-info text-sm md:text-base text-white md:font-medium mb-2 h-fit p-2">
                   {login.tokenSent}
                 </span>
                 <label className="label flex flex-col justify-start items-start px-0">

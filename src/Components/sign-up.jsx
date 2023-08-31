@@ -116,7 +116,7 @@ export function Signup() {
   return (
     <>
       <div className="flex flex-row w-screen h-screen">
-        <div className=" w-[45%] bg-gradient-to-br from-primary to-secondary flex justify-center items-center">
+        <div className="invisible md:visible w-0 md:w-[45%] bg-gradient-to-br from-primary to-secondary flex justify-center items-center">
           <div className="w-4/5 bg-accent opacity-70 rounded-2xl flex flex-col py-5 gap-6 justify-center items-center">
             <div className="avatar">
               <div className=" w-36 h-36 rounded">
@@ -129,9 +129,9 @@ export function Signup() {
             </span>
           </div>
         </div>
-        <div className="flex flex-col w-[55%] h-full justify-center items-center">
+        <div className="flex flex-col w-full md:w-[55%] h-full justify-center items-center">
           {form1 && (
-            <form onSubmit={handleForm1} className="w-9/12">
+            <form onSubmit={handleForm1} className="w-11/12 md:w-9/12">
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
@@ -230,7 +230,7 @@ export function Signup() {
             </form>
           )}
           {form2 && (
-            <form onSubmit={handleForm2} className="w-9/12">
+            <form onSubmit={handleForm2} className="w-11/12 md:w-9/12">
               <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
@@ -340,7 +340,7 @@ export function Signup() {
             </form>
           )}
           {form3 && (
-            <form onSubmit={handleForm3} className="w-9/12">
+            <form onSubmit={handleForm3} className="w-11/12 md:w-9/12">
               <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
