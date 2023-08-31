@@ -27,10 +27,10 @@ export default function App() {
           <Route path="log-in" element={<Login />} />
           <Route path="courses" element={<Courses />} />
           <Route path="courses/:class" element={<ClassCourses />} />
+          <Route path="courses/:class/:slug" element={<Course />} />
           <Route path="books" element={<Books />} />
           <Route path="books/:class" element={<ClassBooks />} />
           <Route path="teachers" element={<Teachers />} />
-          <Route path="course/:slug" element={<Course />} />
           <Route path="user/:handle" element={<User />} />
           <Route path="my-settings" element={<Settings />} />
           <Route path="create-course" element={<CreateCourse />} />
