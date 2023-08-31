@@ -13,7 +13,7 @@ export function MyHome() {
     <div className="bg-base-100 absolute w-[70vw]">
       {!logged ? (
         <div
-          className="hero w-screen min-h-[90vh] mt-[10vh]"
+          className="hero w-screen lg:min-h-[90vh] min-h-[93vh] lg:mt-[10vh] mt-[7vh]"
           style={{
             backgroundImage:
               "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",

@@ -491,6 +491,23 @@ export function Signup() {
                   )}
                   {signupPage.passEConPass}
                 </span>
+                <span className="text-md text-primary mt-4">
+                  {signupPage.byClick}
+                  <a
+                    className="text-info hover:opacity-70"
+                    href="/privacy-policy"
+                  >
+                    {signupPage.privacyPolicy}
+                  </a>
+                  {signupPage.and}
+                  <a
+                    className="text-info hover:opacity-70"
+                    href="terms-conditions"
+                  >
+                    {signupPage.termsConditions}
+                  </a>
+                  {signupPage.final}
+                </span>
                 <div className="flex justify-between">
                   <button
                     type="button"

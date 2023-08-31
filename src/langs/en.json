@@ -68,7 +68,12 @@
     "eightChars": "Password Must be 8 or more Characters",
     "star": "*",
     "starText1": "Stared '",
-    "starText2": "' Fields Must Be Filled!"
+    "starText2": "' Fields Must Be Filled!",
+    "byClick": "By clicking \"SIGN UP\" I agree to the ",
+    "and": " and ",
+    "privacyPolicy": "Privacy Policy",
+    "termsConditions": "Terms & Conditions",
+    "final": ""
   },
   "createCoursePage": {
     "vidLink": "Video Link",

@@ -39,7 +39,7 @@ export function Layout() {
       {logged && (
         <div className="drawer lg:drawer-open mt-[10vh] h-[90vh]">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-content pl-72 h-fit">
+          <div className="drawer-content lg:pl-72 h-fit">
             {!user.credentialVerified && verifTokenSent && (
               <div className="flex justify-center">
                 <div className="flex items-center alert alert-success m-1 w-fit h-8 py-0 ">
@@ -125,7 +125,7 @@ export function Layout() {
               </ul>
               <ul className="mb-5">
                 <li className="flex flex-row">
-                  <a className="p-0" href="/privcy-policy">
+                  <a className="p-0" href="/privacy-policy">
                     <span className="m-2 text-xs">{layout.privacyPolicy}</span>
                   </a>
                   <a className="p-0" href="/terms-conditions">

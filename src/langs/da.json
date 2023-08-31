@@ -54,7 +54,12 @@
     "eightChars": "رمز باید 8 کاراکتر یا بیشتر باشد",
     "star": "*",
     "starText1": "خانه های ستاره دار",
-    "starText2": "باید پر گردد"
+    "starText2": "باید پر گردد",
+    "byClick": "با کلیک کردن 'ثبت نام' من با ",
+    "and": " و ",
+    "privacyPolicy": "حفظ حریم خصوصی",
+    "termsConditions": "شرایط و ضوابط ",
+    "final": "موافق هستم"
   },
   "createCoursePage": {
     "vidLink": "لینک ویدیو",

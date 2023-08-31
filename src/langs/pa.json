@@ -54,7 +54,12 @@
     "eightChars": "پټنوم باید ۸ نه ډیر توري ولري",
     "star": "*",
     "starText1": " ستوری لرونکې",
-    "starText2": "خانې باید ډکې کړئ "
+    "starText2": "خانې باید ډکې کړئ ",
+    "byClick": "د 'ګډون' په کلیک کولو سره زه د ",
+    "and": " او ",
+    "privacyPolicy": "پټتیا تګلارې",
+    "termsConditions": "شرایط او مقررو ",
+    "final": "سره موافق یم"
   },
   "createCoursePage": {
     "vidLink": "د ویډیو لینک",
