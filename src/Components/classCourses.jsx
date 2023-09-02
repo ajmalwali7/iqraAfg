@@ -16,7 +16,7 @@ export function ClassCourses() {
   const courseFunc = async () => {
     try {
       const courses = await axios.get(
-        `http://localhost:3000/api/v1/courses/${classe.class}`,
+        `https://iqraafg.cyclic.app/api/v1/courses/${classe.class}`,
         {
           headers: {
             Authorization: `Bearer ${

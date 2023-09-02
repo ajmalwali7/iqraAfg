@@ -56,7 +56,7 @@ export function CreateCourse() {
     e.target[3].checked ? course.append("doc", JSON.stringify(reqBody)) : null;
     try {
       await axios.post(
-        "http://localhost:3000/api/v1/courses/",
+        "https://iqraafg.cyclic.app/api/v1/courses/",
         e.target[3].checked ? course : reqBody,
         {
           headers: {

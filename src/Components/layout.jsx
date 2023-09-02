@@ -19,7 +19,7 @@ export function Layout() {
     setVerifTokenSent(true);
     console.log("Verification Sent!");
     await axios
-      .get("http://localhost:3000/api/v1/users/emailverificationtoken", {
+      .get("https://iqraafg.cyclic.app/api/v1/users/emailverificationtoken", {
         headers: {
           Authorization: `Bearer ${document.cookie
             .match("(^|;)\\s*" + "jwt" + "\\s*=\\s*([^;]+)")

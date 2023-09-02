@@ -61,7 +61,7 @@ export function Settings() {
   const updateMe = async () => {
     try {
       const res = await axios.patch(
-        "http://localhost:3000/api/v1/users/updateMe",
+        "https://iqraafg.cyclic.app/api/v1/users/updateMe",
         reqUpdateBody,
         {
           headers: {
@@ -93,7 +93,7 @@ export function Settings() {
     photo.append("photo", e.target[0].files[0], "photo");
     try {
       const res = await axios.patch(
-        "http://localhost:3000/api/v1/users/updateMe",
+        "https://iqraafg.cyclic.app/api/v1/users/updateMe",
         photo,
         {
           headers: {
@@ -126,7 +126,7 @@ export function Settings() {
     setIsLoading(true);
     try {
       const res = await axios.patch(
-        "http://localhost:3000/api/v1/users/updatePassword",
+        "https://iqraafg.cyclic.app/api/v1/users/updatePassword",
         reqBody,
         {
           headers: {
@@ -162,7 +162,7 @@ export function Settings() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete("http://localhost:3000/api/v1/users/deleteMe", {
+      await axios.delete("https://iqraafg.cyclic.app/api/v1/users/deleteMe", {
         headers: {
           Authorization: `Bearer ${document.cookie
             .match("(^|;)\\s*" + "jwt" + "\\s*=\\s*([^;]+)")

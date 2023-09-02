@@ -24,7 +24,7 @@ export function Comment(props) {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/v1/courses/${props.comment.course}/comments/${props.comment.id}`,
+        `https://iqraafg.cyclic.app/api/v1/courses/${props.comment.course}/comments/${props.comment.id}`,
         { comment: e.target[0].value },
         {
           headers: {
@@ -73,7 +73,7 @@ export function Comment(props) {
   const deleteComment = async () => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/v1/comments/${props.comment.id}`,
+        `https://iqraafg.cyclic.app/api/v1/comments/${props.comment.id}`,
         {
           headers: {
             Authorization: `Bearer ${document.cookie
@@ -101,7 +101,7 @@ export function Comment(props) {
     setIsLoading(true);
     try {
       const res = await axios.patch(
-        `http://localhost:3000/api/v1/comments/${props.comment.id}`,
+        `https://iqraafg.cyclic.app/api/v1/comments/${props.comment.id}`,
         { comment: e.target[0].value },
         {
           headers: {

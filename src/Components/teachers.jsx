@@ -18,7 +18,7 @@ export function Teachers() {
   const courseFunc = async () => {
     try {
       const courses = await axios.get(
-        `http://localhost:3000/api/v1/users?role=teacher`,
+        `https://iqraafg.cyclic.app/api/v1/users?role=teacher`,
         {
           headers: {
             Authorization: `Bearer ${

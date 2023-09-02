@@ -46,7 +46,7 @@ export function Login() {
     };
     try {
       await axios.post(
-        `http://localhost:3000/api/v1/users/forgotPassword`,
+        `https://iqraafg.cyclic.app/api/v1/users/forgotPassword`,
         email
       );
       document.querySelector("form").reset();
@@ -78,7 +78,7 @@ export function Login() {
     };
     try {
       const res = await axios.patch(
-        `http://localhost:3000/api/v1/users/resetPassword/${e.target[0].value}`,
+        `https://iqraafg.cyclic.app/api/v1/users/resetPassword/${e.target[0].value}`,
         body
       );
       document.cookie = `jwt=${res.data.token}; max-age=${new Date(
@@ -110,7 +110,7 @@ export function Login() {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/v1/users/login`,
+        `https://iqraafg.cyclic.app/api/v1/users/login`,
         reqBody
       );
       document.cookie = `jwt=${res.data.token}; max-age=${new Date(

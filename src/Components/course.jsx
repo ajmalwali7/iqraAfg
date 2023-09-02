@@ -22,7 +22,7 @@ export function Course() {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/v1/courses/${course.id}/comments`,
+        `https://iqraafg.cyclic.app/api/v1/courses/${course.id}/comments`,
         { comment: e.target[0].value },
         {
           headers: {
@@ -64,7 +64,7 @@ export function Course() {
   const getCourse = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/courses/course/${handle.slug}`
+        `https://iqraafg.cyclic.app/api/v1/courses/course/${handle.slug}`
       );
       dispatch(setCourse(res.data.data.course));
       document.title = `${res.data.data.course.title}: Iqra Afghanistan`;

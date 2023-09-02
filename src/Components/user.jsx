@@ -13,7 +13,7 @@ export function User() {
   const getUser = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/users/user/${handle.handle}`
+        `https://iqraafg.cyclic.app/api/v1/users/user/${handle.handle}`
       );
       setUser(res.data.data.user);
       setError(false);
