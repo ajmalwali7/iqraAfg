@@ -16,6 +16,8 @@ import { ClassBooks } from "./Components/classBooks";
 import { Teachers } from "./Components/teachers";
 import { Course } from "./Components/course";
 import { CreateCourse } from "./Components/createCourse";
+import { PrivacyPolicy } from "./Components/privacyPolicy";
+import { TermsConditions } from "./Components/termsConditions";
 
 export default function App() {
   return (
@@ -34,6 +36,8 @@ export default function App() {
           <Route path="user/:handle" element={<User />} />
           <Route path="my-settings" element={<Settings />} />
           <Route path="create-course" element={<CreateCourse />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-conditions" element={<TermsConditions />} />
           <Route path="*" element={<Missing />} />
         </Route>
       </Routes>
