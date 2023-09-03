@@ -1,6 +1,6 @@
-import en from "../langs/en.json";
-import pa from "../langs/pa.json";
-import da from "../langs/da.json";
+import en from "../assets/langs/en.json";
+import pa from "../assets/langs/pa.json";
+import da from "../assets/langs/da.json";
 
 const lang = localStorage.getItem("lang");
 let initialState = en;
