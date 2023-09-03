@@ -1,7 +1,3 @@
 export function PrivacyPolicy() {
-  return (
-    <>
-      <div>Privacy Policy #Hello</div>
-    </>
-  );
+  return <div>Hello</div>;
 }
