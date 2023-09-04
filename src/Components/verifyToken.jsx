@@ -28,9 +28,12 @@ export function VerifyToken() {
       )}`;
       localStorage.setItem("user", JSON.stringify(res.data.data.user));
       dispatch(setUser(res.data.data.user));
-      dispatch(logIn());
-      setTimeout(() => navigate("/"), 5000);
+      setTimeout(() => {
+        dispatch(logIn());
+        navigate("/");
+      }, 5000);
     } catch (err) {
+      console.log(verified);
       if (!verified) {
         setError(true);
       }
