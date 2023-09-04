@@ -23,11 +23,11 @@ export function VerifyToken() {
       );
       setVerified(true);
       console.log(res);
+      localStorage.setItem("user", JSON.stringify(res.data.data.user));
+      dispatch(setUser(res.data.data.user));
       document.cookie = `jwt=${res.data.token}; max-age=${new Date(
         Date.now + 2 * 24 * 60 * 60 * 1000
       )}`;
-      localStorage.setItem("user", JSON.stringify(res.data.data.user));
-      dispatch(setUser(res.data.data.user));
       setTimeout(() => {
         dispatch(logIn());
         navigate("/");
