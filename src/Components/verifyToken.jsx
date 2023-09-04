@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logIn, setUser } from "../actions";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
@@ -37,12 +37,7 @@ export function VerifyToken() {
       }
     }
   };
-
-  useEffect(() => {
-    if (!verified) {
-      verifyToken();
-    }
-  }, []);
+  verifyToken();
   return (
     <>
       {!error ? (

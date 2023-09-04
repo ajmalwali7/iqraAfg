@@ -117,7 +117,6 @@ export function Login() {
         Date.now + 2 * 24 * 60 * 60 * 1000
       )}`;
       localStorage.setItem("user", JSON.stringify(res.data.data.user));
-
       dispatch(setUser(res.data.data.user));
       dispatch(logIn());
       navigate("/");
