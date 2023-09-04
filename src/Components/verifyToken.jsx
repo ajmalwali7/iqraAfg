@@ -21,19 +21,17 @@ export function VerifyToken() {
       const res = await axios.patch(
         `https://iqraafg.cyclic.app/api/v1/users/verifyemail/${handle.token}`
       );
-      setVerified(true);
-      console.log(res);
-      localStorage.setItem("user", JSON.stringify(res.data.data.user));
-      dispatch(setUser(res.data.data.user));
       document.cookie = `jwt=${res.data.token}; max-age=${new Date(
         Date.now + 2 * 24 * 60 * 60 * 1000
       )}`;
+      setVerified(true);
+      localStorage.setItem("user", JSON.stringify(res.data.data.user));
+      dispatch(setUser(res.data.data.user));
       setTimeout(() => {
         dispatch(logIn());
         navigate("/");
       }, 5000);
     } catch (err) {
-      console.log(verified);
       if (!verified) {
         setError(true);
       }
@@ -41,9 +39,7 @@ export function VerifyToken() {
   };
 
   useEffect(() => {
-    console.log("useEffect Hook");
     if (!verified) {
-      console.log("useEffect Hook 1");
       verifyToken();
     }
   }, []);
