@@ -18,6 +18,7 @@ import { Course } from "./Components/course";
 import { CreateCourse } from "./Components/createCourse";
 import { PrivacyPolicy } from "./Components/privacyPolicy";
 import { TermsConditions } from "./Components/termsConditions";
+import { VerifyToken } from "./Components/verifyToken";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="books/:class" element={<ClassBooks />} />
           <Route path="teachers" element={<Teachers />} />
           <Route path="user/:handle" element={<User />} />
+          <Route path="verify-email/:token" element={<VerifyToken />} />
           <Route path="my-settings" element={<Settings />} />
           <Route path="create-course" element={<CreateCourse />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />

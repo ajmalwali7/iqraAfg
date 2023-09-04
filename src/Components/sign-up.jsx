@@ -6,8 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faX, faCheck } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-import { noNav, logIn, setUser } from "../actions";
+import { noNav } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
 
 export function Signup() {
@@ -25,8 +24,8 @@ export function Signup() {
   const [form1, setForm1] = useState(true);
   const [form2, setForm2] = useState(false);
   const [form3, setForm3] = useState(false);
+  const [verifPage, setVerifPage] = useState(false);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const passReqs = [
@@ -96,19 +95,14 @@ export function Signup() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await axios.post(
+      await axios.post(
         "https://iqraafg.cyclic.app/api/v1/users/signup",
         reqBody
       );
-      document.cookie = `jwt=${res.data.token}; max-age=${new Date(
-        Date.now + 2 * 24 * 60 * 60 * 1000
-      )}`;
-      localStorage.setItem("user", JSON.stringify(res.data.data.user));
-      dispatch(setUser(res.data.data.user));
-      dispatch(logIn());
-      navigate("/");
+      setForm3(false);
+      setVerifPage(true);
     } catch (err) {
-      console.log(err);
+      console.log("error");
     } finally {
       setIsLoading(false);
     }
@@ -548,6 +542,36 @@ export function Signup() {
                 </div>
               </div>
             </form>
+          )}
+          {verifPage && (
+            <div className="flex flex-col card bg-accent shadow-xl w-11/12 md:w-9/12 py-4 px-5 h-fit">
+              <div className="avatar mb-6">
+                <div className="w-14 h-14 rounded">
+                  <img src="/imgs/logo/light-logo.png" />
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="flex items-center alert alert-success m-1 w-fit py-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="stroke-current shrink-0 h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>
+                    Signed Up! Please Check Your Email And Click the
+                    Verification Link
+                  </span>
+                </div>
+              </div>
+            </div>
           )}
         </div>
       </div>
