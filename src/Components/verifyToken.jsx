@@ -2,8 +2,6 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { logIn, setUser } from "../actions";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
@@ -13,22 +11,14 @@ export function VerifyToken() {
   const [verified, setVerified] = useState(false);
   const handle = useParams();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const verifyToken = async () => {
     try {
-      console.log(handle.token);
-      const res = await axios.patch(
+      await axios.patch(
         `https://iqraafg.cyclic.app/api/v1/users/verifyemail/${handle.token}`
       );
-      document.cookie = `jwt=${res.data.token}; max-age=${new Date(
-        Date.now + 2 * 24 * 60 * 60 * 1000
-      )}`;
       setVerified(true);
-      localStorage.setItem("user", JSON.stringify(res.data.data.user));
-      dispatch(setUser(res.data.data.user));
       setTimeout(() => {
-        dispatch(logIn());
         navigate("/");
       }, 5000);
     } catch (err) {
@@ -59,10 +49,10 @@ export function VerifyToken() {
                   />
                 </svg>
                 <span>
-                  Email Verified! You Can Go To Homepage By Clicking{" "}
+                  Email Verified! You Can Log In By Clicking{" "}
                   <a
                     className="underline hover:opacity-50 active:opacity-75 hover:cursor-pointer"
-                    href="/"
+                    href="/log-in"
                   >
                     Here
                   </a>
