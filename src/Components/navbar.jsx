@@ -65,11 +65,15 @@ export function Navbar() {
               <div className="py-3 ">
                 <a
                   href="/"
-                  className="text-2xl text-primary font-medium flex gap-2 items-center"
+                  className="text-3xl text-primary font-medium flex gap-2 items-center justify-center"
                 >
                   <div className="avatar">
-                    <div className="w-11 h-11">
-                      <img src="/imgs/logo/light-logo.png" />
+                    <div className="w-12 h-12">
+                      <img
+                        src={`/imgs/logo/${
+                          theme === "dark" ? "dark" : "light"
+                        }-logo.png`}
+                      />
                     </div>
                   </div>
                   IQRA AFGHANISTAN
@@ -236,7 +240,11 @@ export function Navbar() {
                 >
                   <div className="avatar">
                     <div className="w-9 h-9">
-                      <img src="/imgs/logo/light-logo.png" />
+                      <img
+                        src={`/imgs/logo/${
+                          theme === "dark" ? "dark" : "light"
+                        }-logo.png`}
+                      />
                     </div>
                   </div>
                   IQRA AFGHANISTAN
