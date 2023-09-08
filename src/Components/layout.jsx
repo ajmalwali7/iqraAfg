@@ -126,8 +126,18 @@ export function Layout() {
               <ul className="mb-5">
                 <li className="flex flex-row">
                   <a className="p-0" href="/privacy-policy">
+                    <span className="m-2 text-xs">About Us</span>
+                  </a>
+                  <span className="p-0 min-h-0 min-w-0">|</span>
+                  <a className="p-0" href="/terms-conditions">
+                    <span className="m-2 text-xs">Our Partners</span>
+                  </a>
+                </li>
+                <li className="flex flex-row">
+                  <a className="p-0" href="/privacy-policy">
                     <span className="m-2 text-xs">{layout.privacyPolicy}</span>
                   </a>
+                  <span className="p-0 min-h-0 min-w-0">|</span>
                   <a className="p-0" href="/terms-conditions">
                     <span className="m-2 text-xs">
                       {layout.termsConditions}

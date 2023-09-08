@@ -144,9 +144,6 @@ export function Navbar() {
                           <a>About IQRA AFGHANISTAN</a>
                         </li>
                         <li>
-                          <a>About Ajmal Wali</a>
-                        </li>
-                        <li>
                           <a>Our Partners</a>
                         </li>
                         <li>
@@ -370,9 +367,6 @@ export function Navbar() {
                             <a className="text-xl h-10">
                               About IQRA AFGHANISTAN
                             </a>
-                          </li>
-                          <li>
-                            <a className="text-xl h-10">About Ajmal Wali</a>
                           </li>
                           <li>
                             <a className="text-xl h-10">Our Partners</a>
