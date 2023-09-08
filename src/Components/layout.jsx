@@ -35,7 +35,11 @@ export function Layout() {
     <>
       <Navbar />
       <Background />
-      {!logged && <Outlet />}
+      {!logged && (
+        <div className="mt-[7vh] lg:mt-[10vh] border-t border-transparent">
+          <Outlet />
+        </div>
+      )}
       {logged && (
         <div className="drawer lg:drawer-open mt-[7vh] lg:mt-[10vh] h-[93vh] lg:h-[90vh]">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -125,11 +129,11 @@ export function Layout() {
               </ul>
               <ul className="mb-5">
                 <li className="flex flex-row">
-                  <a className="p-0" href="/privacy-policy">
+                  <a className="p-0" href="/about-us">
                     <span className="m-2 text-xs">About Us</span>
                   </a>
                   <span className="p-0 min-h-0 min-w-0">|</span>
-                  <a className="p-0" href="/terms-conditions">
+                  <a className="p-0" href="/our-partners">
                     <span className="m-2 text-xs">Our Partners</span>
                   </a>
                 </li>

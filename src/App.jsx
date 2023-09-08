@@ -19,6 +19,8 @@ import { CreateCourse } from "./Components/createCourse";
 import { PrivacyPolicy } from "./Components/privacyPolicy";
 import { TermsConditions } from "./Components/termsConditions";
 import { VerifyToken } from "./Components/verifyToken";
+import { OurPartners } from "./Components/ourPartners";
+import { AboutUs } from "./Components/aboutUs";
 
 export default function App() {
   return (
@@ -38,6 +40,8 @@ export default function App() {
           <Route path="verify-email/:token" element={<VerifyToken />} />
           <Route path="my-settings" element={<Settings />} />
           <Route path="create-course" element={<CreateCourse />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="our-partners" element={<OurPartners />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-conditions" element={<TermsConditions />} />
           <Route path="*" element={<Missing />} />

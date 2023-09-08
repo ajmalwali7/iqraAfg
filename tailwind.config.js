@@ -9,11 +9,11 @@ export default {
           colorScheme: "dark",
           background: "#051723",
 
-          primary: "#2F5D9D",
+          primary: "#EEF8FC",
 
           secondary: "#0087B8",
 
-          accent: "#A8DBF0",
+          accent: "#21416E",
 
           neutral: "#0D3B59",
 

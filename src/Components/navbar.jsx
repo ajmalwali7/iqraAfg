@@ -141,10 +141,10 @@ export function Navbar() {
                       </summary>
                       <ul className="p-2 bg-accent text-primary w-56">
                         <li>
-                          <a>About IQRA AFGHANISTAN</a>
+                          <a href="/about-us">About IQRA AFGHANISTAN</a>
                         </li>
                         <li>
-                          <a>Our Partners</a>
+                          <a href="/our-partners">Our Partners</a>
                         </li>
                         <li>
                           <a href="/privacy-policy">Privacy Policy</a>
@@ -364,12 +364,14 @@ export function Navbar() {
                         <summary className="text-xl h-10">About</summary>
                         <ul className="p-0 bg-base-100">
                           <li>
-                            <a className="text-xl h-10">
+                            <a href="about-us" className="text-xl h-10">
                               About IQRA AFGHANISTAN
                             </a>
                           </li>
                           <li>
-                            <a className="text-xl h-10">Our Partners</a>
+                            <a href="/our-partners" className="text-xl h-10">
+                              Our Partners
+                            </a>
                           </li>
                           <li>
                             <a href="/privacy-policy" className="text-xl h-10">
