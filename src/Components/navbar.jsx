@@ -80,24 +80,7 @@ export function Navbar() {
                 </a>
               </div>
             </div>
-            <div className="px-11">
-              <label>
-                <select
-                  onChange={handleLang}
-                  defaultValue={
-                    lang.lang === "en"
-                      ? "English"
-                      : lang.lang === "pa"
-                      ? "پشتو"
-                      : "دری"
-                  }
-                  className="select focus:outline-none focus:text-primary-focus focus:font-medium text-neutral-500"
-                >
-                  <option>English</option>
-                  <option>پشتو</option>
-                  <option>دری</option>
-                </select>
-              </label>
+            <div>
               <label className="swap swap-rotate">
                 {/* this hidden checkbox controls the state */}
                 <input
@@ -124,33 +107,67 @@ export function Navbar() {
                   <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                 </svg>
               </label>
-
+              <label>
+                <select
+                  onChange={handleLang}
+                  defaultValue={
+                    lang.lang === "en"
+                      ? "English"
+                      : lang.lang === "pa"
+                      ? "پشتو"
+                      : "دری"
+                  }
+                  className="select focus:outline-none focus:text-primary focus:font-medium text-neutral-500"
+                >
+                  <option>English</option>
+                  <option>پشتو</option>
+                  <option>دری</option>
+                </select>
+              </label>
               {!logged && (
                 <ul className="menu menu-horizontal px-5 flex gap-5 items-end">
                   <li>
-                    <a>Link</a>
+                    <a
+                      className="text-primary text-lg font-medium hover:bg-transparent px-0"
+                      href="/"
+                    >
+                      Home
+                    </a>
                   </li>
                   <li>
                     <details>
-                      <summary>Parent</summary>
-                      <ul className="p-2 bg-base-100">
+                      <summary className="text-primary text-lg font-medium hover:bg-transparent px-0">
+                        About
+                      </summary>
+                      <ul className="p-2 bg-accent text-primary w-56">
                         <li>
-                          <a>Link 1</a>
+                          <a>About IQRA AFGHANISTAN</a>
                         </li>
                         <li>
-                          <a>Link 2</a>
+                          <a>About Ajmal Wali</a>
+                        </li>
+                        <li>
+                          <a>Our Partners</a>
+                        </li>
+                        <li>
+                          <a href="/privacy-policy">Privacy Policy</a>
+                        </li>
+                        <li>
+                          <a href="/terms-conditions">Terms & Conditions</a>
                         </li>
                       </ul>
                     </details>
                   </li>
                   <div className="flex gap-2">
                     <li
-                      className="btn btn-primary w-24 rounded-2xl p-0"
+                      className="btn btn-outline text-primary border-primary hover:text-primary hover:bg-slate-200 w-24 rounded-2xl p-0"
                       onClick={() => {
                         navigate("/log-in");
                       }}
                     >
-                      <a className="hover:bg-transparent">{navDoc.login}</a>
+                      <a className="hover:bg-transparent hover:text-primary p-0">
+                        {navDoc.login}
+                      </a>
                     </li>
                     <li
                       className="btn btn-secondary w-24 rounded-2xl p-0"
@@ -343,26 +360,45 @@ export function Navbar() {
                       </label>
                     </div>
                     <div className="flex flex-col gap-4 menu menu-horizontal px-5 items-center">
-                      <a className="text-xl h-10">Link</a>
+                      <a href="/" className="text-xl h-10">
+                        Home
+                      </a>
                       <details>
-                        <summary className="text-xl h-10">Parent</summary>
+                        <summary className="text-xl h-10">About</summary>
                         <ul className="p-0 bg-base-100">
                           <li>
-                            <a className="text-xl h-10">Link 1</a>
+                            <a className="text-xl h-10">
+                              About IQRA AFGHANISTAN
+                            </a>
                           </li>
                           <li>
-                            <a className="text-xl h-10">Link 2</a>
+                            <a className="text-xl h-10">About Ajmal Wali</a>
+                          </li>
+                          <li>
+                            <a className="text-xl h-10">Our Partners</a>
+                          </li>
+                          <li>
+                            <a href="/privacy-policy" className="text-xl h-10">
+                              Privacy Policy
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/terms-conditions"
+                              className="text-xl h-10"
+                            >
+                              Terms & Conditions
+                            </a>
                           </li>
                         </ul>
                       </details>
-
                       <button
-                        className="btn btn-primary opacity-100 w-full rounded-2xl p-0"
+                        className="btn btn-outline text-primary border-primary hover:text-primary hover:bg-slate-200 w-full rounded-2xl p-0"
                         onClick={() => {
                           navigate("/log-in");
                         }}
                       >
-                        <a className="hover:bg-transparent">{navDoc.login}</a>
+                        {navDoc.login}
                       </button>
                       <button
                         className="btn btn-secondary opacity-100 w-full rounded-2xl p-0"
@@ -370,7 +406,7 @@ export function Navbar() {
                           navigate("/sign-up");
                         }}
                       >
-                        <a className="hover:bg-transparent">{navDoc.signup}</a>
+                        {navDoc.signup}
                       </button>
                     </div>
                   </ul>
