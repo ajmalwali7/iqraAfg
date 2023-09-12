@@ -13,6 +13,7 @@ import { logIn, noNav, setUser } from "../actions";
 export function Login() {
   const dispatch = useDispatch();
   const login = useSelector((s) => s.lang.loginPage);
+  const theme = useSelector((s) => s.theme);
   const [isLoading, setIsLoading] = useState(false);
   const [sameText, setSameText] = useState(false);
   const [eightChars, setEightChars] = useState(false);
@@ -141,12 +142,16 @@ export function Login() {
 
   return (
     <>
-      <div className="flex flex-row w-screen h-screen">
+      <div className="flex flex-row w-screen h-screen fixed top-0">
         <div className="invisible md:visible w-0 md:w-[45%] bg-gradient-to-br from-primary to-secondary flex justify-center items-center">
           <div className="w-4/5 bg-accent opacity-70 rounded-2xl flex flex-col gap-6 justify-center items-center py-5">
             <div className="avatar">
               <div className=" w-36 h-36 rounded">
-                <img src="/imgs/logo/light-logo.png" />
+                <img
+                  src={`/imgs/logo/${
+                    theme === "light" ? "light-logo.png" : "dark-logo.png"
+                  }`}
+                />
               </div>
             </div>
             <span className="px-8 text-4xl text-primary block">
@@ -161,7 +166,11 @@ export function Login() {
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
-                    <img src="/imgs/logo/light-logo.png" />
+                    <img
+                      src={`/imgs/logo/${
+                        theme === "light" ? "light-logo.png" : "dark-logo.png"
+                      }`}
+                    />
                   </div>
                 </div>
                 {incorrectCreds && (
@@ -246,7 +255,11 @@ export function Login() {
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
-                    <img src="/imgs/logo/light-logo.png" />
+                    <img
+                      src={`/imgs/logo/${
+                        theme === "light" ? "light-logo.png" : "dark-logo.png"
+                      }`}
+                    />
                   </div>
                 </div>
                 {noUserFound && (
@@ -302,7 +315,11 @@ export function Login() {
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
-                    <img src="/imgs/logo/light-logo.png" />
+                    <img
+                      src={`/imgs/logo/${
+                        theme === "light" ? "light-logo.png" : "dark-logo.png"
+                      }`}
+                    />
                   </div>
                 </div>
                 {tokenWrong && (

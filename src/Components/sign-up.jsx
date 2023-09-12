@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export function Signup() {
   const signupPage = useSelector((s) => s.lang.signupPage);
+  const theme = useSelector((s) => s.theme);
   const [student, setStudent] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [sameText, setSameText] = useState(false);
@@ -111,12 +112,16 @@ export function Signup() {
   document.title = "Courses: Iqra Afghanistan";
   return (
     <>
-      <div className="flex flex-row w-screen h-screen">
+      <div className="flex flex-row w-screen h-screen fixed top-0">
         <div className="invisible md:visible w-0 md:w-[45%] bg-gradient-to-br from-primary to-secondary flex justify-center items-center">
           <div className="w-4/5 bg-accent opacity-70 rounded-2xl flex flex-col py-5 gap-6 justify-center items-center">
             <div className="avatar">
               <div className=" w-36 h-36 rounded">
-                <img src="/imgs/logo/light-logo.png" />
+                <img
+                  src={`/imgs/logo/${
+                    theme === "light" ? "light-logo.png" : "dark-logo.png"
+                  }`}
+                />
               </div>
             </div>
             <span className="px-8 text-4xl text-primary block">
@@ -131,7 +136,11 @@ export function Signup() {
               <div className="flex flex-col card bg-accent shadow-xl w-full py-4 px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
-                    <img src="/imgs/logo/light-logo.png" />
+                    <img
+                      src={`/imgs/logo/${
+                        theme === "light" ? "light-logo.png" : "dark-logo.png"
+                      }`}
+                    />
                   </div>
                 </div>
                 <span className="label-text text-info text-base block">
@@ -230,7 +239,11 @@ export function Signup() {
               <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
-                    <img src="/imgs/logo/light-logo.png" />
+                    <img
+                      src={`/imgs/logo/${
+                        theme === "light" ? "light-logo.png" : "dark-logo.png"
+                      }`}
+                    />
                   </div>
                 </div>
                 <span className="label-text text-info text-base block">
@@ -340,7 +353,11 @@ export function Signup() {
               <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 h-fit">
                 <div className="avatar mb-6">
                   <div className="w-14 h-14 rounded">
-                    <img src="/imgs/logo/light-logo.png" />
+                    <img
+                      src={`/imgs/logo/${
+                        theme === "light" ? "light-logo.png" : "dark-logo.png"
+                      }`}
+                    />
                   </div>
                 </div>
                 <span className="label-text text-info text-base block">
@@ -547,7 +564,11 @@ export function Signup() {
             <div className="flex flex-col card bg-accent shadow-xl w-11/12 md:w-9/12 py-4 px-5 h-fit">
               <div className="avatar mb-6">
                 <div className="w-14 h-14 rounded">
-                  <img src="/imgs/logo/light-logo.png" />
+                  <img
+                    src={`/imgs/logo/${
+                      theme === "light" ? "light-logo.png" : "dark-logo.png"
+                    }`}
+                  />
                 </div>
               </div>
               <div className="flex justify-center">
