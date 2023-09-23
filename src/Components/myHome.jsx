@@ -25,7 +25,6 @@ export function MyHome() {
               style={{
                 backgroundImage:
                   "url(https://drive.google.com/uc?id=1tyrWLBDIuytCoSt87NtrCLd7rmyEEdJg&export=view)",
-                // https://drive.google.com/file/d/1BHD_hchT_odHa0fHjcg1f52HKcbO31vF/view?usp=sharing
               }}
             >
               <div className="hero-overlay bg-opacity-30"></div>
@@ -59,14 +58,65 @@ export function MyHome() {
           <section>
             <div className="hero w-screen min-h-screen">
               <div className="hero-content w-10/12 text-neutral-content">
-                <div className="text-primary w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent overflow-x-hidden h-fit">
+                <div
+                  className="text-primary bg-cover w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent overflow-x-hidden h-fit"
+                  style={{
+                    backgroundImage: `url(${
+                      theme === "light"
+                        ? `https://drive.google.com/uc?id=192apgQQWQSLy60x-gUMzLWs4b7h_ch2n&export=view`
+                        : `https://drive.google.com/uc?id=1gqE3g5HtYTrBlrMuY5k6uu1dfxFQqur3&export=view`
+                    })`,
+                  }}
+                >
                   <card className="flex items-center justify-center">
                     <p>
-                      <span className="text-xl font-medium text-center">
-                        IQRA AFGHANISTAN
-                      </span>{" "}
-                      is an effort to bring education to every individual in
-                      Afghanistan.
+                      <strong>
+                        <em>IQRA AFGHANISTAN,</em>
+                      </strong>{" "}
+                      a pioneering initiative dedicated to transforming the
+                      lives of students in Afghanistan through accessible online
+                      education{" "}
+                      <a
+                        className="hover:cursor-pointer opacity-70 hover:opacity-100"
+                        onClick={() => navigate("/about-us")}
+                      >
+                        <em>read more about us...</em>
+                      </a>
+                      <br />
+                      <br />
+                      <strong>
+                        <em>Our Vision</em>
+                      </strong>{" "}
+                      is simple yet profound: to empower Afghan students with
+                      the knowledge and skills they need to shape their own
+                      futures. We believe that education is not just a right but
+                      a fundamental tool for personal growth, community
+                      development, and societal progress. We are driven by the
+                      belief that when students are educated, they become agents
+                      of change, capable of overcoming obstacles and achieving
+                      their dreams,{" "}
+                      <a
+                        className="hover:cursor-pointer opacity-70 hover:opacity-100"
+                        onClick={() => navigate("/about-us")}
+                      >
+                        <em>read more about us...</em>
+                      </a>
+                      <br />
+                      <br />
+                      <strong>
+                        <em>Our Mission</em>
+                      </strong>{" "}
+                      is to provide a safe, inclusive, and accessible online
+                      learning environment where students can thrive
+                      academically and personally. We strive to bridge the
+                      education gap that has left many Afghan students without
+                      access to formal schooling,{" "}
+                      <a
+                        className="hover:cursor-pointer opacity-70 hover:opacity-100"
+                        onClick={() => navigate("/about-us")}
+                      >
+                        <em>read more about us...</em>
+                      </a>
                     </p>
                   </card>
                 </div>
@@ -105,24 +155,21 @@ export function MyHome() {
             </div>
           </section>
           <section>
-            <div className="hero w-screen min-h-screen">
+            <div className="hero w-screen">
               <div className="hero-content w-10/12 text-neutral-content">
-                <div className="text-primary w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent overflow-x-hidden h-fit">
-                  <h1 className="text-3xl font-medium text-center">
-                    Contact Us
-                  </h1>
-                  <card className="mt-12 flex items-center justify-center">
-                    <a
-                      href="https://omid.edu.af/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        alt="Omid Afghanistan"
-                        className="rounded-full w-36 h-36"
-                        src="/imgs/partners/omid-logo.png"
-                      />
-                    </a>
+                <div className="text-primary bg-cover w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent overflow-x-hidden h-fit">
+                  <card className="flex flex-col items-center justify-center">
+                    <h1 className="text-3xl font-medium text-center">
+                      Contact Us
+                    </h1>
+                    <p>
+                      <strong>
+                        <em>IQRA AFGHANISTAN,</em>
+                      </strong>{" "}
+                      a pioneering initiative dedicated to transforming the
+                      lives of students in Afghanistan through accessible online
+                      education{" "}
+                    </p>
                   </card>
                 </div>
               </div>
