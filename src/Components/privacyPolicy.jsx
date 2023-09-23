@@ -77,7 +77,12 @@ export function PrivacyPolicy() {
       <p className="text-lg">{`By using IQRA AFGHANISTAN, you agree to this Privacy Policy.`}</p>
       <ul className="my-10">
         <li className="font-bold text-lg">IQRA AFGHANISTAN</li>
-        <li>info@iqraafg.edu</li>
+        <li className="underline hover:opacity-50">
+          <a href="www.iqraafg.com" rel="noreferrer" target="_blank">
+            www.iqraafg.com
+          </a>
+        </li>
+        <li>contact@iqraafg.com</li>
       </ul>
     </div>
   );

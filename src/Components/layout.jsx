@@ -221,10 +221,16 @@ export function Layout() {
                   </a>
                 </li>
                 <li>
-                  <span className="m-2 mb-0 text-xs md:text-base p-0 hover:cursor-auto hover:text-primary items-center">
-                    <FontAwesomeIcon icon={faCopyright} />
-                    2023 IQRA AFGHANISTAN
-                  </span>
+                  <p className="flex flex-row items-center">
+                    <FontAwesomeIcon
+                      icon={faCopyright}
+                      className="text-primary text-xl mt-2"
+                    />
+                    <span className="m-2 mb-0 text-xs p-0 text-primary items-center">
+                      2023 IQRA AFGHANISTAN,
+                      <br /> All Rights Reserved
+                    </span>
+                  </p>
                 </li>
               </ul>
             </ul>
