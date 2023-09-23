@@ -30,7 +30,7 @@ export function MyHome() {
             >
               <div className="hero-overlay bg-opacity-30"></div>
               <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md bg-accent text-primary opacity-90 p-7 rounded-3xl mb-28">
+                <div className="max-w-md bg-accent text-primary opacity-90 p-7 rounded-3xl mb-24">
                   <div className="avatar">
                     <div className=" w-36 h-36 rounded">
                       <img
@@ -42,9 +42,9 @@ export function MyHome() {
                   </div>
                   <h1 className="mb-5 text-4xl font-bold">IQRA AFGHANISTAN</h1>
                   <p className="mb-5">
-                    Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                    assumenda excepturi exercitationem quasi. In deleniti eaque
-                    aut repudiandae et a id nisi.
+                    {`A pioneering initiative dedicated to transforming the lives of students in Afghanistan through accessible online education.`}
+                    <br />
+                    {`At the heart of our mission lies a commitment to breaking down barriers and ensuring that every student, regardless of their circumstances, has the opportunity to receive a quality education.`}
                   </p>
                   <button
                     onClick={() => navigate("/sign-up")}
