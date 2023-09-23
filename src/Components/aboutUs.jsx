@@ -1,6 +1,6 @@
 export function AboutUs() {
   return (
-    <div className="text-primary card shadow-xl mt-2 m-3 p-9 bg-accent overflow-x-hidden h-fit lg:mt-9 lg:m-11">
+    <div className="text-primary card shadow-xl mt-2 m-3 p-9 bg-accent overflow-x-hidden h-fit lg:mt-9 lg:m-11 flex flex-col gap-5">
       <div>
         <h1 className="font-bold text-2xl mt-5 pl-4">
           Welcome to IQRA AFGHANISTAN
