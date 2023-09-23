@@ -109,7 +109,7 @@ export function AboutUs() {
           {`Have questions or want to get involved? Contact us at contact@iqraafg.com.`}
         </p>
       </div>
-      <ul className="my-10">
+      <ul className="my-10 pl-4">
         <li className="font-bold text-lg">IQRA AFGHANISTAN</li>
         <li className="underline hover:opacity-50">
           <a href="www.iqraafg.com" rel="noreferrer" target="_blank">
