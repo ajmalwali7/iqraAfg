@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export function MyHome() {
   const dispatch = useDispatch();
@@ -162,14 +163,28 @@ export function MyHome() {
                     <h1 className="text-3xl font-medium text-center">
                       Contact Us
                     </h1>
+                    <br />
                     <p>
                       <strong>
-                        <em>IQRA AFGHANISTAN,</em>
+                        <em>Email:</em>
                       </strong>{" "}
-                      a pioneering initiative dedicated to transforming the
-                      lives of students in Afghanistan through accessible online
-                      education{" "}
+                      contact@iqraafg.com{" "}
                     </p>
+                    <br />
+                    <div className="flex flex-row gap-8 justify-center items-center">
+                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <FontAwesomeIcon
+                          icon={faXTwitter}
+                          className="text-3xl"
+                        />
+                      </a>
+                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <FontAwesomeIcon
+                          icon={faLinkedinIn}
+                          className="text-3xl"
+                        />
+                      </a>
+                    </div>
                   </card>
                 </div>
               </div>
@@ -177,8 +192,8 @@ export function MyHome() {
           </section>
           <footer>
             <div className="hero w-screen min-h-[40vh] bg-accent shadow-inner flex flex-col">
-              <div className="grid grid-cols-3 w-screen min-h-[40vh]">
-                <div className="flex flex-col gap-4 justify-between p-7">
+              <div className="px-10 grid grid-cols-3 w-screen min-h-[40vh]">
+                <div className="flex flex-col gap-4 p-7">
                   <div className="avatar">
                     <div className="w-24 h-24 rounded">
                       <img
@@ -188,10 +203,76 @@ export function MyHome() {
                       />
                     </div>
                   </div>
-                  <p></p>
+                  <p className="text-xs text-primary opacity-70">
+                    A pioneering initiative dedicated to transforming the lives
+                    of students in Afghanistan through accessible online
+                    education. At the heart of our mission lies a commitment to
+                    breaking down barriers and ensuring that every student,
+                    regardless of their circumstances, has the opportunity to
+                    receive a quality education,{" "}
+                    <span className="hover:cursor-pointer font-medium">
+                      <a onClick={() => navigate("/about-us")}>
+                        <em>read more...</em>
+                      </a>
+                    </span>
+                  </p>
                 </div>
-                <div className="flex flex-col gap-4 p-7"></div>
-                <div className="flex flex-col gap-4 p-7"></div>
+                <div className="flex flex-col gap-3 p-7 text-primary">
+                  <a className="p-0" href="/">
+                    <span>Home</span>
+                  </a>
+                  <a className="p-0" href="/about-us">
+                    <span>About Us</span>
+                  </a>
+                  <a className="p-0" href="/our-partners">
+                    <span>Our Partners</span>
+                  </a>
+                  <a className="p-0" href="/privacy-policy">
+                    <span>Privacy Policy</span>
+                  </a>
+                  <a className="p-0" href="/terms-conditions">
+                    <span>Terms & Conditions</span>
+                  </a>
+                </div>
+                <div className="flex flex-col justify-between p-7">
+                  <div className="flex flex-col gap-2">
+                    <button
+                      className="btn btn-outline text-primary border-primary hover:text-primary hover:bg-slate-200 w-full rounded-2xl p-0"
+                      onClick={() => {
+                        navigate("/log-in");
+                      }}
+                    >
+                      Log In
+                    </button>
+                    <button
+                      className="btn btn-secondary opacity-100 w-full rounded-2xl p-0"
+                      onClick={() => {
+                        navigate("/sign-up");
+                      }}
+                    >
+                      Sign Up
+                    </button>
+                  </div>
+                  <div className="text-primary">
+                    <div className="flex flex-row gap-8 justify-end items-center">
+                      <span>
+                        <em>Follow Us:</em>
+                      </span>
+                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <FontAwesomeIcon
+                          icon={faXTwitter}
+                          className="text-3xl"
+                        />
+                      </a>
+                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <FontAwesomeIcon
+                          icon={faLinkedinIn}
+                          className="text-3xl"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
               <p>
                 <span className="m-2 mb-0 text-base p-0 text-primary items-center">
