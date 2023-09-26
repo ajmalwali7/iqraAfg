@@ -214,7 +214,7 @@ export function Navbar() {
               )}
             </div>
           </div>
-          <div className="navbar bg-accent h-[7vh] glass z-[9999] min-h-0 opacity-90 justify-between fixed lg:invisible visible">
+          <div className="navbar bg-accent h-[7vh] glass z-[9999] min-h-0 opacity-90 items-center justify-between fixed lg:invisible visible">
             <div className="flex flex-row h-[7vh] w-full justify-between px-2">
               {logged && (
                 <label
@@ -247,7 +247,7 @@ export function Navbar() {
                   </svg>
                 </label>
               )}
-              <div className="py-3 ">
+              <div>
                 <a
                   href="/"
                   className="md:text-2xl text-xl text-primary md:font-medium flex gap-2 items-center"
@@ -261,14 +261,15 @@ export function Navbar() {
                       />
                     </div>
                   </div>
+                  {!logged && `IQRA AFGHANISTAN`}
                 </a>
               </div>
               {logged && (
-                <ul className="menu menu-horizontal px-3 flex gap-5 items-end">
+                <ul className="menu menu-horizontal p-0 pt-2">
                   <details className="dropdown dropdown-end z-[5000]">
                     <summary className="marker:content-none">
                       <div tabIndex={0} className="avatar">
-                        <div className="w-9 rounded-full">
+                        <div className="w-9 h-9 rounded-full">
                           <img
                             src={
                               user.photo
