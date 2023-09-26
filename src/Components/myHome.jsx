@@ -30,9 +30,9 @@ export function MyHome() {
             >
               <div className="hero-overlay bg-opacity-30"></div>
               <div className="hero-content text-center text-neutral-content">
-                <div className="max-w-md bg-accent text-primary opacity-90 p-7 rounded-3xl mb-24">
+                <div className="max-w-md w-[90vw] bg-accent text-primary opacity-90 p-7 rounded-3xl mb-24">
                   <div className="avatar">
-                    <div className=" w-36 h-36 rounded">
+                    <div className="w-28 h-28 md:w-36 md:h-36 rounded">
                       <img
                         src={`/imgs/logo/${
                           theme === "light" ? "light-logo.png" : "dark-logo.png"
@@ -40,8 +40,10 @@ export function MyHome() {
                       />
                     </div>
                   </div>
-                  <h1 className="mb-5 text-4xl font-bold">IQRA AFGHANISTAN</h1>
-                  <p className="mb-5">
+                  <h1 className="mb-3 md:mb-5 text-2xl md:text-4xl font-bold">
+                    IQRA AFGHANISTAN
+                  </h1>
+                  <p className="mb-3 md:mb-5 text-sm md:text-base">
                     {`A pioneering initiative dedicated to transforming the lives of students in Afghanistan through accessible online education.`}
                     <br />
                     {`At the heart of our mission lies a commitment to breaking down barriers and ensuring that every student, regardless of their circumstances, has the opportunity to receive a quality education.`}
@@ -58,9 +60,9 @@ export function MyHome() {
           </section>
           <section>
             <div className="hero w-screen min-h-screen">
-              <div className="hero-content w-10/12 text-neutral-content">
+              <div className="hero-content w-full md:w-10/12 text-neutral-content">
                 <div
-                  className="text-primary bg-cover w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent overflow-x-hidden h-fit"
+                  className="text-primary bg-cover w-full rounded-3xl shadow-xl my-3 p-9 lg:p-14 bg-accent overflow-x-hidden h-fit"
                   style={{
                     backgroundImage: `url(${
                       theme === "light"
@@ -70,7 +72,7 @@ export function MyHome() {
                   }}
                 >
                   <div className="flex items-center justify-center">
-                    <p>
+                    <p className="text-base md:text-xl">
                       <strong>
                         <em>IQRA AFGHANISTAN,</em>
                       </strong>{" "}
@@ -133,8 +135,8 @@ export function MyHome() {
               }}
             >
               <div className="hero-overlay bg-opacity-40"></div>
-              <div className="hero-content w-10/12 text-neutral-content">
-                <div className="text-primary w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent opacity-90 overflow-x-hidden h-fit">
+              <div className="hero-content w-[90vw] md:w-10/12 text-neutral-content">
+                <div className="text-primary w-full rounded-3xl shadow-xl p-9 lg:p-14 bg-accent opacity-90 overflow-x-hidden h-fit">
                   <h1 className="text-3xl font-medium text-center">
                     Our Partners
                   </h1>
@@ -157,8 +159,8 @@ export function MyHome() {
           </section>
           <section>
             <div className="hero w-screen">
-              <div className="hero-content w-10/12 text-neutral-content">
-                <div className="text-primary bg-cover w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent overflow-x-hidden h-fit">
+              <div className="hero-content w-full md:w-10/12 text-neutral-content">
+                <div className="text-primary bg-cover w-full rounded-3xl shadow-xl my-3 p-9 lg:p-14 bg-accent overflow-x-hidden h-fit">
                   <div className="flex flex-col items-center justify-center">
                     <h1 className="text-3xl font-medium text-center">
                       Contact Us
@@ -192,10 +194,10 @@ export function MyHome() {
           </section>
           <footer>
             <div className="hero w-screen min-h-[40vh] bg-accent shadow-inner flex flex-col">
-              <div className="px-10 grid grid-cols-3 w-screen min-h-[40vh]">
-                <div className="flex flex-col gap-4 p-7">
+              <div className="flex flex-col md:px-4 lg:px-10 md:grid md:grid-cols-3 w-screen min-h-[40vh]">
+                <div className="flex flex-col gap-2 md:gap-4 p-4 md:p-7">
                   <div className="avatar">
-                    <div className="w-24 h-24 rounded">
+                    <div className="w-16 h-16 md:w-24 md:h-24 rounded">
                       <img
                         src={`/imgs/logo/${
                           theme === "light" ? "light-logo.png" : "dark-logo.png"
@@ -217,7 +219,7 @@ export function MyHome() {
                     </span>
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 p-7 text-primary">
+                <div className="flex flex-col gap-1 text-center md:text-left md:gap-3 p-4 md:p-7 text-primary">
                   <a className="p-0" href="/">
                     <span>Home</span>
                   </a>
@@ -234,7 +236,7 @@ export function MyHome() {
                     <span>Terms & Conditions</span>
                   </a>
                 </div>
-                <div className="flex flex-col justify-between p-7">
+                <div className="flex flex-col-reverse md:flex-col justify-between p-7">
                   <div className="flex flex-col gap-2">
                     <button
                       className="btn btn-outline text-primary border-primary hover:text-primary hover:bg-slate-200 w-full rounded-2xl p-0"
@@ -254,20 +256,20 @@ export function MyHome() {
                     </button>
                   </div>
                   <div className="text-primary">
-                    <div className="flex flex-row gap-8 justify-end items-center">
+                    <div className="flex flex-row gap-8 mb-8 md:mb-0 justify-center md:justify-end items-center">
                       <span>
                         <em>Follow Us:</em>
                       </span>
                       <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
                         <FontAwesomeIcon
                           icon={faXTwitter}
-                          className="text-3xl"
+                          className="text-xl md:text-3xl"
                         />
                       </a>
                       <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
                         <FontAwesomeIcon
                           icon={faLinkedinIn}
-                          className="text-3xl"
+                          className="text-xl md:text-3xl"
                         />
                       </a>
                     </div>
@@ -275,13 +277,13 @@ export function MyHome() {
                 </div>
               </div>
               <p>
-                <span className="m-2 mb-0 text-base p-0 text-primary items-center">
+                <span className="m-2 mb-0 text-sm md:text-base p-0 text-primary items-center">
                   <FontAwesomeIcon icon={faCopyright} /> 2023 IQRA AFGHANISTAN,
                   All Rights Reserved
                 </span>
               </p>
               <p className="pb-10">
-                <span className="m-2 mb-0 text-base p-0 text-primary items-center">
+                <span className="m-2 mb-0 text-sm md:text-base p-0 text-primary items-center">
                   Made with{" "}
                   <FontAwesomeIcon icon={faHeart} className="text-error" /> by{" "}
                   <a
