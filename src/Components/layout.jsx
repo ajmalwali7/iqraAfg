@@ -5,6 +5,8 @@ import { Background } from "./background";
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 import axios from "axios";
 import {
@@ -199,36 +201,65 @@ export function Layout() {
                   </li>
                 )}
               </ul>
-              <ul className="mb-5">
+              <ul>
                 <li className="flex flex-row">
                   <a className="p-0" href="/about-us">
-                    <span className="m-2 text-xs">About Us</span>
+                    <span className="m-1 text-xs">About Us</span>
                   </a>
                   <span className="p-0 min-h-0 min-w-0">|</span>
                   <a className="p-0" href="/our-partners">
-                    <span className="m-2 text-xs">Our Partners</span>
+                    <span className="m-1 text-xs">Our Partners</span>
                   </a>
                 </li>
                 <li className="flex flex-row">
                   <a className="p-0" href="/privacy-policy">
-                    <span className="m-2 text-xs">{layout.privacyPolicy}</span>
+                    <span className="m-1 text-xs">{layout.privacyPolicy}</span>
                   </a>
                   <span className="p-0 min-h-0 min-w-0">|</span>
                   <a className="p-0" href="/terms-conditions">
-                    <span className="m-2 text-xs">
+                    <span className="m-1 text-xs">
                       {layout.termsConditions}
                     </span>
                   </a>
                 </li>
-                <li>
-                  <p className="flex flex-row items-center">
+                <li className="flex flex-row">
+                  <div className="text-primary text-xs p-0 m-1">
+                    <div className="flex flex-row gap-8">
+                      <span>Follow Us:</span>
+                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <FontAwesomeIcon icon={faXTwitter} />
+                      </a>
+                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <FontAwesomeIcon icon={faLinkedinIn} />
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li className="border-t border-t-primary mt-2 pt-2">
+                  <p className="flex flex-row p-0 m-1 mt-0">
                     <FontAwesomeIcon
                       icon={faCopyright}
-                      className="text-primary text-xl mt-2"
+                      className="text-primary text-xl"
                     />
-                    <span className="m-2 mb-0 text-xs p-0 text-primary items-center">
+                    <span className="text-xs p-0 text-primary items-center">
                       2023 IQRA AFGHANISTAN,
                       <br /> All Rights Reserved
+                    </span>
+                  </p>
+                  <p className="p-0">
+                    <span className="text-xs text-primary ml-1">
+                      Made with{" "}
+                      <FontAwesomeIcon icon={faHeart} className="text-error" />{" "}
+                      by{" "}
+                      <a
+                        href="https://twitter.com/ajmalwali7"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:opacity-50 underline"
+                      >
+                        AJMAL WALI
+                      </a>
+                      ,<br /> for AFGHAN GIRLS.
                     </span>
                   </p>
                 </li>
