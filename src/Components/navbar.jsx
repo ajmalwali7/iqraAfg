@@ -261,7 +261,6 @@ export function Navbar() {
                       />
                     </div>
                   </div>
-                  IQRA AFGHANISTAN
                 </a>
               </div>
               {logged && (
