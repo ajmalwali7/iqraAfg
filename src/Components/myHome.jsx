@@ -69,7 +69,7 @@ export function MyHome() {
                     })`,
                   }}
                 >
-                  <card className="flex items-center justify-center">
+                  <div className="flex items-center justify-center">
                     <p>
                       <strong>
                         <em>IQRA AFGHANISTAN,</em>
@@ -119,7 +119,7 @@ export function MyHome() {
                         <em>read more about us...</em>
                       </a>
                     </p>
-                  </card>
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,7 +138,7 @@ export function MyHome() {
                   <h1 className="text-3xl font-medium text-center">
                     Our Partners
                   </h1>
-                  <card className="mt-12 flex items-center justify-center">
+                  <div className="mt-12 flex items-center justify-center">
                     <a
                       href="https://omid.edu.af/"
                       target="_blank"
@@ -150,7 +150,7 @@ export function MyHome() {
                         src="/imgs/partners/omid-logo.png"
                       />
                     </a>
-                  </card>
+                  </div>
                 </div>
               </div>
             </div>
@@ -159,7 +159,7 @@ export function MyHome() {
             <div className="hero w-screen">
               <div className="hero-content w-10/12 text-neutral-content">
                 <div className="text-primary bg-cover w-full rounded-3xl shadow-xl mt-2 m-3 p-14 bg-accent overflow-x-hidden h-fit">
-                  <card className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col items-center justify-center">
                     <h1 className="text-3xl font-medium text-center">
                       Contact Us
                     </h1>
@@ -185,7 +185,7 @@ export function MyHome() {
                         />
                       </a>
                     </div>
-                  </card>
+                  </div>
                 </div>
               </div>
             </div>

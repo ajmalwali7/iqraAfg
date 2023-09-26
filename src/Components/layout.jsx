@@ -136,7 +136,7 @@ export function Layout() {
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu flex flex-col justify-between shadow-md p-5 text-base mt-[7vh] lg:mt-0 w-56 md:w-72 lg:w-72 h-[93vh] lg:h-[90vh] bg-accent text-primary fixed">
               {/* Sidebar content here */}
-              <div className="flex flex-row fixed -top-3 left-32 lg:invisible">
+              <div className="flex flex-row fixed -top-3 left-20 md:left-32 lg:invisible">
                 <label>
                   <select
                     onChange={handleLang}

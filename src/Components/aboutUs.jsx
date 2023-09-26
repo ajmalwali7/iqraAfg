@@ -1,8 +1,8 @@
 export function AboutUs() {
   return (
-    <div className="text-primary card shadow-xl mt-2 m-3 p-9 bg-accent overflow-x-hidden h-fit lg:mt-9 lg:m-11 flex flex-col gap-5">
+    <div className="text-primary card shadow-xl mt-2 m-3 p-2 md:p-6 lg:p-9 bg-accent overflow-x-hidden h-fit lg:mt-9 lg:m-11 flex flex-col gap-5">
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">
           Welcome to IQRA AFGHANISTAN
         </h1>
         <p className="pl-4 mt-2 text-lg">
@@ -12,13 +12,13 @@ export function AboutUs() {
         </p>
       </div>
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">Our Vision</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">Our Vision</h1>
         <p className="pl-4 mt-2 text-lg">
           {`Our vision is simple yet profound: to empower Afghan students with the knowledge and skills they need to shape their own futures. We believe that education is not just a right but a fundamental tool for personal growth, community development, and societal progress. We are driven by the belief that when students are educated, they become agents of change, capable of overcoming obstacles and achieving their dreams.`}
         </p>
       </div>
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">Our Mission</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">Our Mission</h1>
         <p className="pl-4 mt-2 text-lg">
           {`At IQRA AFGHANISTAN, our mission is to provide a safe, inclusive, and accessible online learning environment where students can thrive academically and personally. We strive to bridge the education gap that has left many Afghan students without access to formal schooling. Our commitment is to create a platform that ensures:`}
         </p>
@@ -46,13 +46,17 @@ export function AboutUs() {
         </ol>
       </div>
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">Why We Exist</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">
+          Why We Exist
+        </h1>
         <p className="pl-4 mt-2 text-lg">
           {`Afghanistan has faced numerous challenges in recent years, including conflict and political instability. These challenges have affected the education of many students. We aim to counter these barriers and give Afghan students the tools they need to build brighter futures. We firmly believe that the key to a prosperous Afghanistan lies in the education and empowerment of its students.`}
         </p>
       </div>
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">Our Approach</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">
+          Our Approach
+        </h1>
         <p className="pl-4 mt-2 text-lg">
           {`Our approach is rooted in innovation, adaptability, and a deep understanding of the unique challenges facing Afghan students. Here's what sets us apart:`}
         </p>
@@ -84,7 +88,7 @@ export function AboutUs() {
         </ol>
       </div>
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">Our Impact</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">Our Impact</h1>
         <p className="pl-4 mt-2 text-lg">
           {`Since our inception, we have witnessed the transformational power of education. We have seen students who were once denied their right to learn excel academically and grow into confident, empowered individuals. Our impact extends beyond the individual level; it ripples through families and communities, contributing to a more educated and progressive society.`}
           <br />
@@ -92,7 +96,7 @@ export function AboutUs() {
         </p>
       </div>
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">
           Join Us in Empowering Afghan Students
         </h1>
         <p className="pl-4 mt-2 text-lg">
@@ -104,7 +108,7 @@ export function AboutUs() {
         </p>
       </div>
       <div>
-        <h1 className="font-bold text-2xl mt-5 pl-4">Contact Us</h1>
+        <h1 className="font-bold text-xl md:text-2xl mt-5 pl-4">Contact Us</h1>
         <p className="pl-4 mt-2 text-lg">
           {`Have questions or want to get involved? Contact us at contact@iqraafg.com.`}
         </p>
