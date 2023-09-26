@@ -292,7 +292,7 @@ export function MyHome() {
                   >
                     AJMAL WALI
                   </a>
-                  , for AFGHAN GIRLS.
+                  , for AFGHAN GIRLS
                 </span>
               </p>
             </div>
