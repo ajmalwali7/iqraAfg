@@ -177,13 +177,13 @@ export function MyHome() {
                       <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
                         <FontAwesomeIcon
                           icon={faXTwitter}
-                          className="text-3xl"
+                          className="text-3xl hover:text-black"
                         />
                       </a>
                       <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
                         <FontAwesomeIcon
                           icon={faLinkedinIn}
-                          className="text-3xl"
+                          className="text-3xl  hover:text-blue-600"
                         />
                       </a>
                     </div>
@@ -263,13 +263,13 @@ export function MyHome() {
                       <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
                         <FontAwesomeIcon
                           icon={faXTwitter}
-                          className="text-xl md:text-3xl"
+                          className="text-xl md:text-3xl hover:text-black"
                         />
                       </a>
                       <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
                         <FontAwesomeIcon
                           icon={faLinkedinIn}
-                          className="text-xl md:text-3xl"
+                          className="text-xl md:text-3xl hover:text-blue-600"
                         />
                       </a>
                     </div>
