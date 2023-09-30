@@ -223,7 +223,7 @@ export function Layout() {
                   </a>
                 </li>
                 <li className="flex flex-row">
-                  <div className="text-primary text-xs p-0 m-1">
+                  <div className="text-primary text-xs p-0 m-1 hover:bg-transparent hover:text-primary">
                     <div className="flex flex-row gap-8">
                       <span>Follow Us:</span>
                       <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
