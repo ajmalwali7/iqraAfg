@@ -85,7 +85,7 @@ export function PrivacyPolicy() {
         </li>
         <li>
           <h3 className="font-semibold text-base md:text-xl">8 - Contact Us</h3>
-          <p className="pl-4 py-3 ">{`If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please contact us at info@iqraafg.edu`}</p>
+          <p className="pl-4 py-3 ">{`If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please contact us at info@iqraafg.com`}</p>
         </li>
       </ol>
       <p className="text-lg">{`By using IQRA AFGHANISTAN, you agree to this Privacy Policy.`}</p>

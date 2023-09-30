@@ -110,7 +110,7 @@ export function TermsConditions() {
           <h3 className="font-semibold text-base md:text-xl">
             10 - Contact Us
           </h3>
-          <p className="pl-4 py-3 ">{`If you have any questions, concerns, or requests regarding these Terms & Conditions, please contact us at info@iqraafg.edu`}</p>
+          <p className="pl-4 py-3 ">{`If you have any questions, concerns, or requests regarding these Terms & Conditions, please contact us at info@iqraafg.com`}</p>
         </li>
       </ol>
       <p className="text-lg">{`By using IQRA AFGHANISTAN, you agree to abide by these Terms & Conditions.`}</p>
