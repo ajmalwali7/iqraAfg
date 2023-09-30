@@ -48,16 +48,14 @@ export function ClassBooks() {
               <tbody>
                 {/* row 1 */}
                 <tr
-                  onClick={() =>
-                    document.getElementById("my_modal_1").showModal()
-                  }
+                  onClick={() => document.getElementById("mm1").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
                   <th>1</th>
                   <td>Mathematics</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
                 </tr>
-                <dialog id="my_modal_1" className="modal h-screen w-screen ">
+                <dialog id="mm1" className="modal h-screen w-screen ">
                   <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
                     <form method="dialog">
                       <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
@@ -76,16 +74,14 @@ export function ClassBooks() {
                 </dialog>
                 {/* row 2 */}
                 <tr
-                  onClick={() =>
-                    document.getElementById("my_modal_1").showModal()
-                  }
+                  onClick={() => document.getElementById("mm2").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
                   <th>2</th>
                   <td>Biology</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
                 </tr>
-                <dialog id="my_modal_1" className="modal h-screen w-screen ">
+                <dialog id="mm2" className="modal h-screen w-screen ">
                   <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
                     <form method="dialog">
                       <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
@@ -102,16 +98,14 @@ export function ClassBooks() {
                 </dialog>
                 {/* row 3 */}
                 <tr
-                  onClick={() =>
-                    document.getElementById("my_modal_1").showModal()
-                  }
+                  onClick={() => document.getElementById("mm3").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
                   <th>3</th>
                   <td>Physics</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
                 </tr>
-                <dialog id="my_modal_1" className="modal h-screen w-screen ">
+                <dialog id="mm3" className="modal h-screen w-screen ">
                   <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
                     <form method="dialog">
                       <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
@@ -128,16 +122,14 @@ export function ClassBooks() {
                 </dialog>
                 {/* row 4 */}
                 <tr
-                  onClick={() =>
-                    document.getElementById("my_modal_1").showModal()
-                  }
+                  onClick={() => document.getElementById("mm4").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
                   <th>4</th>
                   <td>Chemistry</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
                 </tr>
-                <dialog id="my_modal_1" className="modal h-screen w-screen ">
+                <dialog id="mm4" className="modal h-screen w-screen ">
                   <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
                     <form method="dialog">
                       <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
