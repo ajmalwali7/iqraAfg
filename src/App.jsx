@@ -10,7 +10,6 @@ import { MyHome } from "./Components/myHome";
 import { User } from "./Components/user";
 import { Settings } from "./Components/settings";
 import { Courses } from "./Components/courses";
-import { ClassCourses } from "./Components/classCourses";
 import { Books } from "./Components/books";
 import { Teachers } from "./Components/teachers";
 import { Course } from "./Components/course";
@@ -30,7 +29,6 @@ export default function App() {
           <Route path="sign-up" element={<Signup />} />
           <Route path="log-in" element={<Login />} />
           <Route path="courses" element={<Courses />} />
-          <Route path="courses/:class" element={<ClassCourses />} />
           <Route path="courses/:class/:slug" element={<Course />} />
           <Route path="books" element={<Books />} />
           <Route path="teachers" element={<Teachers />} />
