@@ -46,7 +46,37 @@ export function ClassBooks() {
                 </tr>
               </thead>
               <tbody>
-                {/* row 1 */}
+                {/* row */}
+                <tr
+                  onClick={() => document.getElementById("mm10").showModal()}
+                  className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
+                >
+                  <th>1</th>
+                  <td>Islamic Study</td>
+                  <td>{dariBooks ? "Dari" : "Pashto"}</td>
+                </tr>
+                <dialog id="mm10" className="modal h-screen w-screen ">
+                  <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
+                    <form method="dialog">
+                      <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
+                        <FontAwesomeIcon icon={faX} className="text-white" />
+                      </button>
+                    </form>
+                    <iframe
+                      src={`https://moe.gov.af/sites/default/files/2020-03/G${classe.class.slice(
+                        5
+                      )}-${dariBooks ? "Dr" : "Ps"}-Islamic_Study${
+                        dariBooks
+                          ? classe.class.slice(5) === "10"
+                            ? "_hanafi"
+                            : "_Hanafi"
+                          : ""
+                      }.pdf`}
+                      className="h-full w-10/12"
+                    />
+                  </div>
+                </dialog>
+                {/* row */}
                 <tr
                   onClick={() => document.getElementById("mm1").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
@@ -72,7 +102,7 @@ export function ClassBooks() {
                     />
                   </div>
                 </dialog>
-                {/* row 2 */}
+                {/* row */}
                 <tr
                   onClick={() => document.getElementById("mm2").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
@@ -96,7 +126,7 @@ export function ClassBooks() {
                     />
                   </div>
                 </dialog>
-                {/* row 3 */}
+                {/* row */}
                 <tr
                   onClick={() => document.getElementById("mm3").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
@@ -120,7 +150,7 @@ export function ClassBooks() {
                     />
                   </div>
                 </dialog>
-                {/* row 4 */}
+                {/* row */}
                 <tr
                   onClick={() => document.getElementById("mm4").showModal()}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
@@ -144,6 +174,160 @@ export function ClassBooks() {
                     />
                   </div>
                 </dialog>
+                {/* row */}
+                <tr
+                  onClick={() => document.getElementById("mm9").showModal()}
+                  className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
+                >
+                  <th>5</th>
+                  <td>English</td>
+                  <td>{dariBooks ? "Dari" : "Pashto"}</td>
+                </tr>
+                <dialog id="mm9" className="modal h-screen w-screen ">
+                  <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
+                    <form method="dialog">
+                      <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
+                        <FontAwesomeIcon icon={faX} className="text-white" />
+                      </button>
+                    </form>
+                    <iframe
+                      src={`https://moe.gov.af/sites/default/files/2020-03/G${classe.class.slice(
+                        5
+                      )}-Ps-English.pdf`}
+                      className="h-full w-10/12"
+                    />
+                  </div>
+                </dialog>
+                {/* row */}
+                <tr
+                  onClick={() => document.getElementById("mm4").showModal()}
+                  className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
+                >
+                  <th>5</th>
+                  <td>Dari</td>
+                  <td>{dariBooks ? "Dari" : "Pashto"}</td>
+                </tr>
+                <dialog id="mm5" className="modal h-screen w-screen ">
+                  <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
+                    <form method="dialog">
+                      <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
+                        <FontAwesomeIcon icon={faX} className="text-white" />
+                      </button>
+                    </form>
+                    <iframe
+                      src={`https://moe.gov.af/sites/default/files/2020-03/G${classe.class.slice(
+                        5
+                      )}-${dariBooks ? "Dr" : "Ps"}-Dari.pdf`}
+                      className="h-full w-10/12"
+                    />
+                  </div>
+                </dialog>
+                {/* row */}
+                <tr
+                  onClick={() => document.getElementById("mm6").showModal()}
+                  className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
+                >
+                  <th>6</th>
+                  <td>Pashto</td>
+                  <td>{dariBooks ? "Dari" : "Pashto"}</td>
+                </tr>
+                <dialog id="mm6" className="modal h-screen w-screen ">
+                  <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
+                    <form method="dialog">
+                      <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
+                        <FontAwesomeIcon icon={faX} className="text-white" />
+                      </button>
+                    </form>
+                    <iframe
+                      src={`https://moe.gov.af/sites/default/files/2020-03/G${classe.class.slice(
+                        5
+                      )}-${dariBooks ? "Dr" : "Ps"}-Pashto.pdf`}
+                      className="h-full w-10/12"
+                    />
+                  </div>
+                </dialog>
+                {/* row */}
+                <tr
+                  onClick={() => document.getElementById("mm7").showModal()}
+                  className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
+                >
+                  <th>7</th>
+                  <td>History</td>
+                  <td>{dariBooks ? "Dari" : "Pashto"}</td>
+                </tr>
+                <dialog id="mm7" className="modal h-screen w-screen ">
+                  <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
+                    <form method="dialog">
+                      <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
+                        <FontAwesomeIcon icon={faX} className="text-white" />
+                      </button>
+                    </form>
+                    <iframe
+                      src={`https://moe.gov.af/sites/default/files/2020-03/G${classe.class.slice(
+                        5
+                      )}-${dariBooks ? "Dr" : "Ps"}-History.pdf`}
+                      className="h-full w-10/12"
+                    />
+                  </div>
+                </dialog>
+                {/* row */}
+                <tr
+                  onClick={() => document.getElementById("mm8").showModal()}
+                  className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
+                >
+                  <th>8</th>
+                  <td>Geography</td>
+                  <td>{dariBooks ? "Dari" : "Pashto"}</td>
+                </tr>
+                <dialog id="mm8" className="modal h-screen w-screen ">
+                  <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
+                    <form method="dialog">
+                      <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
+                        <FontAwesomeIcon icon={faX} className="text-white" />
+                      </button>
+                    </form>
+                    <iframe
+                      src={`https://moe.gov.af/sites/default/files/2020-03/G${classe.class.slice(
+                        5
+                      )}-${dariBooks ? "Dr" : "Ps"}-Geography.pdf`}
+                      className="h-full w-10/12"
+                    />
+                  </div>
+                </dialog>
+                {classe.class.slice(5) >= 10 ? (
+                  <>
+                    <tr
+                      onClick={() =>
+                        document.getElementById("mm11").showModal()
+                      }
+                      className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
+                    >
+                      <th>5</th>
+                      <td>Computer</td>
+                      <td>{dariBooks ? "Dari" : "Pashto"}</td>
+                    </tr>
+                    <dialog id="mm11" className="modal h-screen w-screen ">
+                      <div className="modal-box max-h-screen max-w-screen-2xl h-screen w-screen flex items-center justify-center py-0">
+                        <form method="dialog">
+                          <button className="btn btn-circle bg-opacity-20 border-0 hover:bg-opacity-40 absolute min-h-0 h-7 w-7 right-4 top-4">
+                            <FontAwesomeIcon
+                              icon={faX}
+                              className="text-white"
+                            />
+                          </button>
+                        </form>
+                        <iframe
+                          src={`https://moe.gov.af/sites/default/files/2020-03/G${classe.class.slice(
+                            5
+                          )}-${dariBooks ? "Dr" : "Ps"}-Computer.pdf`}
+                          className="h-full w-10/12"
+                        />
+                      </div>
+                    </dialog>
+                  </>
+                ) : (
+                  <></>
+                )}
               </tbody>
             </table>
           </div>
