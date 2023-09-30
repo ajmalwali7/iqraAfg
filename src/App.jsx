@@ -12,7 +12,6 @@ import { Settings } from "./Components/settings";
 import { Courses } from "./Components/courses";
 import { ClassCourses } from "./Components/classCourses";
 import { Books } from "./Components/books";
-import { ClassBooks } from "./Components/classBooks";
 import { Teachers } from "./Components/teachers";
 import { Course } from "./Components/course";
 import { CreateCourse } from "./Components/createCourse";
@@ -34,7 +33,6 @@ export default function App() {
           <Route path="courses/:class" element={<ClassCourses />} />
           <Route path="courses/:class/:slug" element={<Course />} />
           <Route path="books" element={<Books />} />
-          <Route path="books/:class" element={<ClassBooks />} />
           <Route path="teachers" element={<Teachers />} />
           <Route path="user/:handle" element={<User />} />
           <Route path="verify-email/:token" element={<VerifyToken />} />
