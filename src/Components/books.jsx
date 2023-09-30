@@ -12,49 +12,51 @@ export function Books() {
   return (
     <>
       {logged && (
-        <div className="text-primary card shadow-xl m-11 p-9 bg-accent overflow-x-hidden">
-          <h1 className=" card-title text-3xl mb-9">Books:</h1>
+        <div className="text-primary card shadow-xl m-2 lg:m-11 p-4 lg:p-9 bg-accent overflow-x-hidden">
+          <h1 className="card-title text-2xl md:text-3xl mb-3 lg:mb-9">
+            Books:
+          </h1>
           <div
             onClick={(e) => setClasse(1 * e.target.text.split(" ")[1])}
-            className="tabs my-3"
+            className="tabs my-2 lg:my-3"
           >
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 classe === 7 ? "tab-active text-primary" : ""
               }`}
             >
               Class 7
             </a>
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 classe === 8 ? "tab-active text-primary" : ""
               }`}
             >
               Class 8
             </a>
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 classe === 9 ? "tab-active text-primary" : ""
               }`}
             >
               Class 9
             </a>
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 classe === 10 ? "tab-active text-primary" : ""
               }`}
             >
               Class 10
             </a>
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 classe === 11 ? "tab-active text-primary" : ""
               }`}
             >
               Class 11
             </a>
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 classe === 12 ? "tab-active text-primary" : ""
               }`}
             >
@@ -66,14 +68,14 @@ export function Books() {
             className="tabs"
           >
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 dariBooks ? "tab-active text-primary" : ""
               }`}
             >
               Dari Books
             </a>
             <a
-              className={`tab tab-lifted ${
+              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
                 dariBooks ? "" : "tab-active text-primary"
               }`}
             >
@@ -105,12 +107,12 @@ export function Books() {
                       : subject
                     : subject
                 }${classe === 8 ? (subject === "Math" ? "_0" : "") : ""}.pdf`}
-                className="h-full w-10/12"
+                className="h-full w-full lg:w-10/12"
               />
             </div>
           </dialog>
           <div className="overflow-x-auto">
-            <table className="table my-10 bg-secondary bg-opacity-5">
+            <table className="table my-6 lg:my-10 bg-secondary bg-opacity-5">
               {/* head */}
               <thead>
                 <tr className="text-primary text-base border-opacity-60">
@@ -120,7 +122,7 @@ export function Books() {
                   <th>Language</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="text-xs md:text-base">
                 {/* row */}
                 <tr
                   onClick={() => {
@@ -143,7 +145,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>1</th>
+                  <th>2</th>
                   <td>Mathematics</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -157,7 +159,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>2</th>
+                  <th>3</th>
                   <td>Biology</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -171,7 +173,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>3</th>
+                  <th>4</th>
                   <td>Physics</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -185,7 +187,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>4</th>
+                  <th>5</th>
                   <td>Chemistry</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -199,7 +201,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>5</th>
+                  <th>6</th>
                   <td>English</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -213,7 +215,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>5</th>
+                  <th>7</th>
                   <td>Dari</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -227,7 +229,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>6</th>
+                  <th>8</th>
                   <td>Pashto</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -241,7 +243,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>7</th>
+                  <th>9</th>
                   <td>History</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -255,7 +257,7 @@ export function Books() {
                   }}
                   className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                 >
-                  <th>8</th>
+                  <th>10</th>
                   <td>Geography</td>
                   <td>{classe}</td>
                   <td>{dariBooks ? "Dari" : "Pashto"}</td>
@@ -270,7 +272,7 @@ export function Books() {
                       }}
                       className="hover:bg-primary hover:bg-opacity-5 hover:cursor-pointer border-opacity-30"
                     >
-                      <th>5</th>
+                      <th>11</th>
                       <td>Computer</td>
                       <td>{classe}</td>
                       <td>{dariBooks ? "Dari" : "Pashto"}</td>
