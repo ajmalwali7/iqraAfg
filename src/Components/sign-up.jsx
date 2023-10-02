@@ -61,7 +61,7 @@ export function Signup() {
           ...reqBody,
           firstName: e.target[0].value,
           lastName: e.target[1].value,
-          email: e.target[4].value,
+          email: e.target[4].value.toLowerCase(),
           phoneNumber: e.target[5].value ? e.target[5].value : null,
           gender: e.target[2].checked ? "female" : "male",
         });
