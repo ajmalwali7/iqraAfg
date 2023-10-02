@@ -46,7 +46,7 @@ export function Signup() {
     setIsLoading(true);
     try {
       const res = await axios.get(
-        `https://iqraafg.cyclic.app/api/v1/users/email/${e.target[4].value}`
+        `https://iqraafg.cyclic.app/api/v1/users/email/${e.target[4].value.toLowerCase()}`
       );
       if (res.data.data.user) {
         setIsLoading(false);
