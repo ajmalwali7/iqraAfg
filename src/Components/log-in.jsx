@@ -43,7 +43,7 @@ export function Login() {
     e.preventDefault();
     setIsLoading(true);
     const email = {
-      email: e.target[0].value,
+      email: e.target[0].value.toLowerCase(),
     };
     try {
       await axios.post(
@@ -192,7 +192,10 @@ export function Login() {
                     required
                     placeholder={login.email}
                     onChange={(e) => {
-                      setReqBody({ ...reqBody, email: e.target.value });
+                      setReqBody({
+                        ...reqBody,
+                        email: e.target.value.toLowerCase(),
+                      });
                     }}
                     className="input input-bordered input-primary w-full max-w-xs focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
                   />
