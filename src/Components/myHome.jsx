@@ -266,7 +266,11 @@ export function MyHome() {
                           className="text-xl md:text-3xl hover:text-black"
                         />
                       </a>
-                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                      <a
+                        className="opacity-60 hover:opacity-100 hover:cursor-pointer"
+                        href="linkedin.com/company/iqra-afghanistan"
+                        target="_blank"
+                      >
                         <FontAwesomeIcon
                           icon={faLinkedinIn}
                           className="text-xl md:text-3xl hover:text-blue-600"

@@ -229,7 +229,11 @@ export function Layout() {
                       <a className="opacity-60 hover:opacity-100 text-base hover:cursor-pointer">
                         <FontAwesomeIcon icon={faXTwitter} />
                       </a>
-                      <a className="opacity-60 hover:opacity-100 text-base hover:cursor-pointer">
+                      <a
+                        className="opacity-60 hover:opacity-100 text-base hover:cursor-pointer"
+                        href="linkedin.com/company/iqra-afghanistan"
+                        target="_blank"
+                      >
                         <FontAwesomeIcon icon={faLinkedinIn} />
                       </a>
                     </div>
