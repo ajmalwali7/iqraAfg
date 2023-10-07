@@ -180,7 +180,12 @@ export function MyHome() {
                           className="text-3xl hover:text-black"
                         />
                       </a>
-                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                      <a
+                        className="opacity-60 hover:opacity-100 hover:cursor-pointer"
+                        href="https://www.linkedin.com/company/iqra-afghanistan"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <FontAwesomeIcon
                           icon={faLinkedinIn}
                           className="text-3xl  hover:text-blue-600"
@@ -268,8 +273,9 @@ export function MyHome() {
                       </a>
                       <a
                         className="opacity-60 hover:opacity-100 hover:cursor-pointer"
-                        href="linkedin.com/company/iqra-afghanistan"
+                        href="https://www.linkedin.com/company/iqra-afghanistan"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <FontAwesomeIcon
                           icon={faLinkedinIn}

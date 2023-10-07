@@ -231,8 +231,9 @@ export function Layout() {
                       </a>
                       <a
                         className="opacity-60 hover:opacity-100 text-base hover:cursor-pointer"
-                        href="linkedin.com/company/iqra-afghanistan"
+                        href="https://www.linkedin.com/company/iqra-afghanistan"
                         target="_blank"
+                        rel="noreferrer"
                       >
                         <FontAwesomeIcon icon={faLinkedinIn} />
                       </a>
