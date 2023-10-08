@@ -243,7 +243,10 @@ export function Settings() {
                   Profile Photo:
                 </span>
                 <div className="flex justify-start pr-0 w-full items-center gap-2 input border-0 input-primary max-w-xs focus-within:outline-none focus-within:ring-2">
-                  <input
+                  <span className="badge badge-info text-xs">
+                    Profile photo change will be available soon!
+                  </span>
+                  {/* <input
                     type="file"
                     name="photo"
                     required
@@ -257,7 +260,8 @@ export function Settings() {
                     >
                       <FontAwesomeIcon icon={faCheck} size="xl" />
                     </button>
-                  )}
+                  )} 
+                  When the issue of file uploading is solved*/}
                 </div>
               </label>
             </form>

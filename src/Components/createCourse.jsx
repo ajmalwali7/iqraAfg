@@ -284,7 +284,7 @@ export function CreateCourse() {
                       {createCoursePage.vidLink}
                     </span>
                   </label>
-                  <label className="label justify-start ">
+                  <label className="label justify-start">
                     <input
                       type="radio"
                       name="link"
@@ -294,9 +294,11 @@ export function CreateCourse() {
                           : setLink(false);
                       }}
                       className="peer mt-1"
+                      disabled
                     />
                     <span className="label-text ml-1 text-base block text-secondary peer-checked:text-primary">
-                      {createCoursePage.vidUpload}
+                      {createCoursePage.vidUpload}{" "}
+                      <span className="badge badge-info">Comming Soon!</span>
                     </span>
                   </label>
                 </div>
