@@ -174,7 +174,12 @@ export function MyHome() {
                     </p>
                     <br />
                     <div className="flex flex-row gap-8 justify-center items-center">
-                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                      <a
+                        className="opacity-60 hover:opacity-100 hover:cursor-pointer"
+                        href="https://www.twitter.com/iqraafg"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <FontAwesomeIcon
                           icon={faXTwitter}
                           className="text-3xl hover:text-black"
@@ -265,7 +270,12 @@ export function MyHome() {
                       <span>
                         <em>Follow Us:</em>
                       </span>
-                      <a className="opacity-60 hover:opacity-100 hover:cursor-pointer">
+                      <a
+                        className="opacity-60 hover:opacity-100 hover:cursor-pointer"
+                        href="https://www.twitter.com/iqraafg"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <FontAwesomeIcon
                           icon={faXTwitter}
                           className="text-xl md:text-3xl hover:text-black"

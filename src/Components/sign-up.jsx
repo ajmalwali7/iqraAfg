@@ -10,6 +10,7 @@ import { noNav } from "../actions";
 import { useDispatch, useSelector } from "react-redux";
 
 export function Signup() {
+  const lang = useSelector((s) => s.lang.lang);
   const signupPage = useSelector((s) => s.lang.signupPage);
   const theme = useSelector((s) => s.theme);
   const [student, setStudent] = useState(true);
@@ -33,6 +34,80 @@ export function Signup() {
     { regex: /.{8,}/, index: 0 },
     { regex: /[0-9]/, index: 1 },
     { regex: /[^a-zA-Z0-9]/, index: 2 },
+  ];
+
+  const provinces = [
+    "Urozgan",
+    "Badghis",
+    "Bamyan",
+    "Badakhshan",
+    "Baghlan",
+    "Balkh",
+    "Takhar",
+    "Joz jan",
+    "Khost",
+    "Daikundi",
+    "Zabul",
+    "Sar e pul",
+    "Samangan",
+    "Ghazni",
+    "Ghor",
+    "Faryab",
+    "Farah",
+    "Kundoz",
+    "Kandahar",
+    "Laghman",
+    "Logar",
+    "Nangarhar",
+    "Nuristan",
+    "Nimroz",
+    "Herat",
+    "Helmand",
+    "Wardak",
+    "Parwan",
+    "Panjsher",
+    "Paktya",
+    "Paktika",
+    "Kabul",
+    "Kapisa",
+    "Kunar",
+  ];
+
+  const provincesPa = [
+    "اورزگان",
+    "بادغیس",
+    "بامیان",
+    "بدخشان",
+    "بغلان",
+    "بلخ",
+    "پروان",
+    "پنجشیر",
+    "پکتیا",
+    "پکتیکا",
+    "تخار",
+    "جوزجان",
+    "خوست",
+    "دایکندی",
+    "زابل",
+    "سر پل",
+    "سمنگان",
+    "غزنی",
+    "غور",
+    "فاریاب",
+    "فراه",
+    "قندهار",
+    "کابل",
+    "کاپیسا",
+    "کندز",
+    "کنر",
+    "لغمان",
+    "لوگر",
+    "میدان وردگ",
+    "ننگرهار",
+    "نورستان",
+    "نیمروز",
+    "هرات",
+    "هلمند",
   ];
 
   function handleRole(e) {
@@ -109,7 +184,7 @@ export function Signup() {
     }
   }
   dispatch(noNav());
-  document.title = "Courses: Iqra Afghanistan";
+  document.title = "Sign Up: Iqra Afghanistan";
   return (
     <>
       <div className="flex flex-row w-screen h-screen fixed top-0">
@@ -320,12 +395,19 @@ export function Signup() {
                       {signupPage.province}:
                     </span>
                     <select className="select w-28 select-primary focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500">
-                      <option defaultValue={"Kabul"}>Kabul</option>
-                      <option>Nangarhar</option>
-                      <option>Kunduz</option>
-                      <option>Balkh</option>
-                      <option>Herat</option>
-                      <option>Kandahar</option>
+                      <option defaultValue={"Kabul"}>
+                        {lang === "en" ? "Kabul" : "کابل"}
+                      </option>
+                      {lang === "en"
+                        ? provinces.map((e) => <option key={e}>{e}</option>)
+                        : provincesPa.map((e) => (
+                            <option
+                              key={e}
+                              value={provinces[provincesPa.indexOf(e)]}
+                            >
+                              {e}
+                            </option>
+                          ))}
                     </select>
                   </label>
                 </div>

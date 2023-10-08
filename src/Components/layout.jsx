@@ -226,7 +226,12 @@ export function Layout() {
                   <div className="text-primary text-xs p-0 m-1 hover:bg-transparent hover:text-primary">
                     <div className="flex flex-row items-center gap-8">
                       <span>Follow Us:</span>
-                      <a className="opacity-60 hover:opacity-100 text-base hover:cursor-pointer">
+                      <a
+                        className="opacity-60 hover:opacity-100 text-base hover:cursor-pointer"
+                        href="https://www.twitter.com/iqraafg"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <FontAwesomeIcon icon={faXTwitter} />
                       </a>
                       <a
