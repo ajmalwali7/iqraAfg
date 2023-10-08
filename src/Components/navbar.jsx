@@ -187,7 +187,7 @@ export function Navbar() {
                             src={
                               user.photo
                                 ? `${user.photo}`
-                                : `/imgs/user-imgs/default.jpg`
+                                : `/imgs/user-imgs/default.png`
                             }
                           />
                         </div>
@@ -274,7 +274,7 @@ export function Navbar() {
                             src={
                               user.photo
                                 ? `${user.photo}`
-                                : `/imgs/user-imgs/default.jpg`
+                                : `/imgs/user-imgs/default.png`
                             }
                           />
                         </div>

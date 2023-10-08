@@ -116,7 +116,7 @@ export function Reply(props) {
                 src={
                   reply.author.photo
                     ? `${reply.author.photo}`
-                    : `/imgs/user-imgs/default.jpg`
+                    : `/imgs/user-imgs/default.png`
                 }
               />
             </div>

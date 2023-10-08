@@ -192,7 +192,7 @@ export function Settings() {
               <div className="w-28 rounded-full cursor-pointer outline outline-2 outline-primary">
                 <img
                   src={
-                    user.photo ? `${user.photo}` : `/imgs/user-imgs/default.jpg`
+                    user.photo ? `${user.photo}` : `/imgs/user-imgs/default.png`
                   }
                 />
               </div>

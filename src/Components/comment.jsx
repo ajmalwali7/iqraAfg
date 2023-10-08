@@ -155,7 +155,7 @@ export function Comment(props) {
                 src={
                   props.comment.author.photo
                     ? `${props.comment.author.photo}`
-                    : `/imgs/user-imgs/default.jpg`
+                    : `/imgs/user-imgs/default.png`
                 }
               />
             </div>
@@ -299,7 +299,7 @@ export function Comment(props) {
                       src={
                         user.photo
                           ? `${user.photo}`
-                          : `/imgs/user-imgs/default.jpg`
+                          : `/imgs/user-imgs/default.png`
                       }
                     />
                   </div>

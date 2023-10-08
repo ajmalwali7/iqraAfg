@@ -11,7 +11,7 @@ export function TeacherCard(props) {
                 src={
                   props.teacher.photo
                     ? `${props.teacher.photo}`
-                    : `/imgs/user-imgs/default.jpg`
+                    : `/imgs/user-imgs/default.png`
                 }
               />
             </div>
