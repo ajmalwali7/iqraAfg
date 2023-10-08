@@ -7,13 +7,13 @@ export default {
       {
         dark: {
           colorScheme: "dark",
-          background: "#051723",
+          background: "#010A16",
 
           primary: "#EEF8FC",
 
           secondary: "#00BCFF",
 
-          accent: "#21416E",
+          accent: "#021023",
 
           neutral: "#0D3B59",
 
