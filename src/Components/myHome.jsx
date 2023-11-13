@@ -296,25 +296,10 @@ export function MyHome() {
                   </div>
                 </div>
               </div>
-              <p>
+              <p className="pb-10">
                 <span className="m-2 mb-0 text-sm md:text-base p-0 text-primary items-center">
                   <FontAwesomeIcon icon={faCopyright} /> 2023 IQRA AFGHANISTAN,
                   All Rights Reserved
-                </span>
-              </p>
-              <p className="pb-10">
-                <span className="m-2 mb-0 text-sm md:text-base p-0 text-primary items-center">
-                  Made with{" "}
-                  <FontAwesomeIcon icon={faHeart} className="text-error" /> by{" "}
-                  <a
-                    href="https://twitter.com/ajmalwali7"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:opacity-50 underline"
-                  >
-                    AJMAL WALI
-                  </a>
-                  , for AFGHAN GIRLS
                 </span>
               </p>
             </div>

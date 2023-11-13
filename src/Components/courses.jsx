@@ -125,7 +125,7 @@ export function Courses() {
               </span>
             </div>
           )}
-          {courses && (
+          {courses && !isLoading && (
             <div>
               <div className="grid grid-cols-3 gap-2 overflow-x-hidden h-0 md:h-fit invisible md:visible">
                 <div className="flex flex-col gap-2">

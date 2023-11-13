@@ -256,22 +256,6 @@ export function Layout() {
                       <br /> All Rights Reserved
                     </span>
                   </p>
-                  <p className="p-0">
-                    <span className="text-xs text-primary ml-1">
-                      Made with{" "}
-                      <FontAwesomeIcon icon={faHeart} className="text-error" />{" "}
-                      by{" "}
-                      <a
-                        href="https://twitter.com/ajmalwali7"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hover:opacity-50 underline"
-                      >
-                        AJMAL WALI
-                      </a>
-                      ,<br /> for AFGHAN GIRLS.
-                    </span>
-                  </p>
                 </li>
               </ul>
             </ul>
