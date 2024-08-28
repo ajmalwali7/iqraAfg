@@ -5,7 +5,6 @@ import { setNav } from "../actions";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export function MyHome() {
