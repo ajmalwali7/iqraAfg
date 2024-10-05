@@ -47,7 +47,7 @@ export function Login() {
     };
     try {
       await axios.post(
-        `https://iqraafg.cyclic.app/api/v1/users/forgotPassword`,
+        `http://localhost:3000/api/v1/users/forgotPassword`,
         email
       );
       document.querySelector("form").reset();
@@ -79,7 +79,7 @@ export function Login() {
     };
     try {
       const res = await axios.patch(
-        `https://iqraafg.cyclic.app/api/v1/users/resetPassword/${e.target[0].value}`,
+        `http://localhost:3000/api/v1/users/resetPassword/${e.target[0].value}`,
         body
       );
       document.cookie = `jwt=${res.data.token}; max-age=${new Date(
@@ -111,7 +111,7 @@ export function Login() {
     setIsLoading(true);
     try {
       const res = await axios.post(
-        `https://iqraafg.cyclic.app/api/v1/users/login`,
+        `http://localhost:3000/api/v1/users/login`,
         reqBody
       );
       document.cookie = `jwt=${res.data.token}; max-age=${new Date(
@@ -204,7 +204,7 @@ export function Login() {
                   <span className="after:content-['*'] after:ml-1 after:text-error after:text-lg  label-text text-base block text-primary-focus ">
                     {login.password}:
                   </span>
-                  <div className="flex justify-start w-full items-center gap-2 input input-bordered input-primary max-w-xs focus-within:outline-none focus-within:ring-2">
+                  <div className="flex bg-accent justify-start w-full items-center gap-2 input input-bordered input-primary max-w-xs focus-within:outline-none focus-within:ring-2">
                     <input
                       type={passwordShown ? "text" : "password"}
                       required

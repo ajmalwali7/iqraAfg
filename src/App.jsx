@@ -10,9 +10,12 @@ import { MyHome } from "./Components/myHome";
 import { User } from "./Components/user";
 import { Settings } from "./Components/settings";
 import { Courses } from "./Components/courses";
+import { CCourses } from "./Components/ccourses";
+import { Chapters } from "./Components/chapters";
 import { Books } from "./Components/books";
 import { Teachers } from "./Components/teachers";
 import { Course } from "./Components/course";
+import { Class } from "./Components/class";
 import { CreateCourse } from "./Components/createCourse";
 import { PrivacyPolicy } from "./Components/privacyPolicy";
 import { TermsConditions } from "./Components/termsConditions";
@@ -28,8 +31,11 @@ export default function App() {
           <Route index element={<MyHome />} />
           <Route path="sign-up" element={<Signup />} />
           <Route path="log-in" element={<Login />} />
+          <Route path="class/:class" element={<Class />} />
+          <Route path="class/:class/:subject" element={<Chapters />} />
+          <Route path="class/:class/:subject/:chapter" element={<CCourses />} />
           <Route path="courses" element={<Courses />} />
-          <Route path="courses/:class/:slug" element={<Course />} />
+          <Route path="course/:slug" element={<Course />} />
           <Route path="books" element={<Books />} />
           <Route path="teachers" element={<Teachers />} />
           <Route path="user/:handle" element={<User />} />

@@ -117,7 +117,7 @@ export function Navbar() {
                       ? "پشتو"
                       : "دری"
                   }
-                  className="select focus:outline-none focus:text-primary focus:font-medium text-neutral-500"
+                  className="select bg-accent focus:outline-none focus:text-primary focus:font-medium text-neutral-500"
                 >
                   <option>English</option>
                   <option>پشتو</option>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
+import chaps from "../assets/docs/chapters.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,12 +11,13 @@ export function CreateCourse() {
   const logged = useSelector((s) => s.isLogged);
   const user = useSelector((s) => s.user);
   const createCoursePage = useSelector((s) => s.lang.createCoursePage);
+  const [subj, setSubjs] = useState(chaps.class7);
+  const [chapters, setChaps] = useState(subj["Holy Quran"]);
   const [isLoading, setIsLoading] = useState(false);
   const [link, setLink] = useState(true);
   const [invalidLink, setInvalidLink] = useState(false);
   const [videoUploaded, setVideoUploaded] = useState(true);
   const [courseCreated, setCourseCreated] = useState(false);
-
   const checkIfVideo = (e) => {
     if (e.nativeEvent.target.files[0])
       setVideoUploaded(e.nativeEvent.target.files[0].type === "video/mp4");
@@ -24,10 +26,10 @@ export function CreateCourse() {
   const uploadCourse = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    if (e.target[2].checked) {
+    if (e.target[3].checked) {
       if (
-        e.target[4].value.includes("youtu.be/") ||
-        e.target[4].value.includes("youtube.com/watch")
+        e.target[5].value.includes("youtu.be/") ||
+        e.target[5].value.includes("youtube.com/watch")
       )
         setInvalidLink(false);
       else {
@@ -39,25 +41,26 @@ export function CreateCourse() {
     const reqBody = {
       class: e.target[0].value * 1,
       subject: e.target[1].value,
-      videoLink: e.target[2].checked
+      chapter: e.target[2].value,
+      videoLink: e.target[3].checked
         ? `https://www.youtube.com/embed/${
-            e.target[4].value.split("=").length > 1
-              ? e.target[4].value.split("=")[1]
-              : e.target[4].value.split("/")[
-                  e.target[4].value.split("/").length - 1
+            e.target[5].value.split("=").length > 1
+              ? e.target[5].value.split("=")[1]
+              : e.target[5].value.split("/")[
+                  e.target[5].value.split("/").length - 1
                 ]
           }`
         : null,
-      title: e.target[5].value,
-      description: e.target[6].value,
+      title: e.target[6].value,
+      description: e.target[7].value,
     };
     let course = new FormData();
-    e.target[3].checked ? course.append("video", e.target[4].files[0]) : null;
-    e.target[3].checked ? course.append("doc", JSON.stringify(reqBody)) : null;
+    e.target[4].checked ? course.append("video", e.target[5].files[0]) : null;
+    e.target[4].checked ? course.append("doc", JSON.stringify(reqBody)) : null;
     try {
       await axios.post(
-        "https://iqraafg.cyclic.app/api/v1/courses/",
-        e.target[3].checked ? course : reqBody,
+        "http://localhost:3000/api/v1/courses/",
+        e.target[4].checked ? course : reqBody,
         {
           headers: {
             Authorization: `Bearer ${document.cookie
@@ -239,7 +242,14 @@ export function CreateCourse() {
                     <span className="after:content-['*'] after:ml-1 after:text-error after:text-lg  label-text text-base block text-primary-focus">
                       {createCoursePage.class}
                     </span>
-                    <select className="select select-primary focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500">
+                    <select
+                      className="select select-primary bg-accent focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
+                      onChange={(e) => {
+                        setSubjs(
+                          chaps[`class` + e.target.selectedOptions[0].value]
+                        );
+                      }}
+                    >
                       <option defaultValue={7}>7</option>
                       <option>8</option>
                       <option>9</option>
@@ -252,17 +262,29 @@ export function CreateCourse() {
                     <span className="after:content-['*'] after:ml-1 after:text-error after:text-lg  label-text text-base block text-primary-focus">
                       {createCoursePage.subject}
                     </span>
-                    <select className="select select-primary focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500">
-                      <option defaultValue="Mathematics">Mathematics</option>
-                      <option>Physics</option>
-                      <option>Biology</option>
-                      <option>Chemistry</option>
-                      <option>Computer</option>
-                      <option>Islamic Studies</option>
-                      <option>Pashto</option>
-                      <option>Dari</option>
-                      <option>History</option>
-                      <option>Geography</option>
+                    <select
+                      className="select select-primary bg-accent focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
+                      onChange={(e) => {
+                        setChaps(subj[e.target.selectedOptions[0].value]);
+                      }}
+                    >
+                      {Object.keys(subj).map((sub) => (
+                        <option key={sub} value={sub}>
+                          {sub}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="label block">
+                    <span className="after:content-['*'] after:ml-1 after:text-error after:text-lg  label-text text-base block text-primary-focus">
+                      {createCoursePage.chapter}
+                    </span>
+                    <select className="select select-primary bg-accent focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500">
+                      {chapters.map((chap) => (
+                        <option key={chap} value={chap}>
+                          {chap}
+                        </option>
+                      ))}
                     </select>
                   </label>
                 </div>
@@ -294,11 +316,9 @@ export function CreateCourse() {
                           : setLink(false);
                       }}
                       className="peer mt-1"
-                      disabled
                     />
                     <span className="label-text ml-1 text-base block text-secondary peer-checked:text-primary">
-                      {createCoursePage.vidUpload}{" "}
-                      <span className="badge badge-info">Comming Soon!</span>
+                      {createCoursePage.vidUpload}
                     </span>
                   </label>
                 </div>
@@ -317,7 +337,7 @@ export function CreateCourse() {
                       type="text"
                       required
                       placeholder={createCoursePage.link}
-                      className="input input-bordered input-primary w-full focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
+                      className="input input-bordered input-primary bg-accent w-full focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
                     />
                   </label>
                 ) : (
@@ -347,7 +367,7 @@ export function CreateCourse() {
                     type="text"
                     required
                     placeholder={createCoursePage.title}
-                    className="input input-bordered input-primary w-full focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
+                    className="input input-bordered input-primary bg-accent w-full focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
                   />
                 </label>
                 <label className="label block">
@@ -359,7 +379,7 @@ export function CreateCourse() {
                     cols={50}
                     required
                     placeholder={createCoursePage.descPlace}
-                    className=" resize-none input input-bordered input-primary w-full h-40 focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
+                    className=" resize-none input input-bordered input-primary bg-accent w-full h-40 focus:outline-none focus:ring-2 focus:text-primary-focus focus:font-medium text-neutral-500"
                   />
                 </label>
                 <div className="flex justify-end">

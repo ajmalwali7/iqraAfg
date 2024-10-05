@@ -1,25 +1,28 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 import { setCourses } from "../actions";
-
+import chaps from "../assets/docs/chapters.json";
 import { CourseCard } from "./courseCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
-export function Courses() {
+export function CCourses() {
   const logged = useSelector((store) => store.isLogged);
   const courses = useSelector((store) => store.courses);
   const dispatch = useDispatch();
-  const [classe, setClasse] = useState(7);
   const [isLoading, setIsLoading] = useState(false);
-
+  const handle = useParams();
+  const c = handle.class;
+  const subj = handle.subject;
+  const chap = chaps[`class${c}`][subj][handle.chapter];
   const courseFunc = async () => {
     setIsLoading(true);
     try {
       const courses = await axios.get(
-        `http://localhost:3000/api/v1/courses?class=${classe}`,
+        `http://localhost:3000/api/v1/courses?class=${c}&subject=${subj}&chapter=${chap}`,
         {
           headers: {
             Authorization: `Bearer ${
@@ -41,62 +44,15 @@ export function Courses() {
     if (logged) {
       courseFunc();
     }
-  }, [classe]);
-  document.title = `Class ${classe} Courses: Iqra Afghanistan`;
+  }, [c]);
+  document.title = `Class ${c} ${subj} Chapters: Iqra Afghanistan`;
   return (
     <>
       {logged && (
         <div className="text-primary card shadow-xl m-2 mb-10 lg:m-11 p-3 lg:p-9 bg-accent overflow-x-hidden">
           <h1 className="card-title text-xl md:text-3xl mb-4 lg:mb-9">
-            Courses:
+            {`Class ${c} ${subj} Chapter ${chap} Courses:`}
           </h1>
-          <div
-            onClick={(e) => setClasse(1 * e.target.text.split(" ")[1])}
-            className="tabs my-2 lg:my-3"
-          >
-            <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 7 ? "tab-active text-primary" : ""
-              }`}
-            >
-              Class 7
-            </a>
-            <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 8 ? "tab-active text-primary" : ""
-              }`}
-            >
-              Class 8
-            </a>
-            <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 9 ? "tab-active text-primary" : ""
-              }`}
-            >
-              Class 9
-            </a>
-            <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 10 ? "tab-active text-primary" : ""
-              }`}
-            >
-              Class 10
-            </a>
-            <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 11 ? "tab-active text-primary" : ""
-              }`}
-            >
-              Class 11
-            </a>
-            <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 12 ? "tab-active text-primary" : ""
-              }`}
-            >
-              Class 12
-            </a>
-          </div>
           {isLoading && (
             <div className="flex items-center justify-center h-52">
               <FontAwesomeIcon
@@ -121,7 +77,7 @@ export function Courses() {
                 />
               </svg>
               <span>
-                No Courses for Class {classe} Yet, Please Visit Another Time!
+                No Courses for Class {c} {subj} Yet, Please Visit Another Time!
               </span>
             </div>
           )}

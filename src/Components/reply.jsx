@@ -31,7 +31,7 @@ export function Reply(props) {
   const deleteReply = async () => {
     try {
       const res = await axios.delete(
-        `https://iqraafg.cyclic.app/api/v1/comments/${reply.id}`,
+        `http://localhost:3000/api/v1/comments/${reply.id}`,
         {
           headers: {
             Authorization: `Bearer ${document.cookie
@@ -67,7 +67,7 @@ export function Reply(props) {
     e.preventDefault();
     try {
       const res = await axios.patch(
-        `https://iqraafg.cyclic.app/api/v1/comments/${reply.id}`,
+        `http://localhost:3000/api/v1/comments/${reply.id}`,
         { comment: e.target[0].value },
         {
           headers: {

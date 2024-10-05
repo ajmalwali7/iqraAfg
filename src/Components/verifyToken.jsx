@@ -15,7 +15,7 @@ export function VerifyToken() {
   const verifyToken = async () => {
     try {
       await axios.patch(
-        `https://iqraafg.cyclic.app/api/v1/users/verifyemail/${handle.token}`
+        `http://localhost:3000/api/v1/users/verifyemail/${handle.token}`
       );
       setVerified(true);
       setTimeout(() => {

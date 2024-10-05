@@ -21,43 +21,55 @@ export function Books() {
             className="tabs my-2 lg:my-3"
           >
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 7 ? "tab-active text-primary" : ""
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                classe === 7
+                  ? "tab-active bg-secondary bg-opacity-5 font-medium"
+                  : ""
               }`}
             >
               Class 7
             </a>
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 8 ? "tab-active text-primary" : ""
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                classe === 8
+                  ? "tab-active bg-secondary bg-opacity-5 font-medium"
+                  : ""
               }`}
             >
               Class 8
             </a>
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 9 ? "tab-active text-primary" : ""
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                classe === 9
+                  ? "tab-active bg-secondary bg-opacity-5 font-medium"
+                  : ""
               }`}
             >
               Class 9
             </a>
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 10 ? "tab-active text-primary" : ""
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                classe === 10
+                  ? "tab-active bg-secondary bg-opacity-5 font-medium"
+                  : ""
               }`}
             >
               Class 10
             </a>
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 11 ? "tab-active text-primary" : ""
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                classe === 11
+                  ? "tab-active bg-secondary bg-opacity-5 font-medium"
+                  : ""
               }`}
             >
               Class 11
             </a>
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                classe === 12 ? "tab-active text-primary" : ""
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                classe === 12
+                  ? "tab-active bg-secondary bg-opacity-5 font-medium"
+                  : ""
               }`}
             >
               Class 12
@@ -68,15 +80,19 @@ export function Books() {
             className="tabs"
           >
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                dariBooks ? "tab-active text-primary" : ""
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                dariBooks
+                  ? "tab-active bg-secondary bg-opacity-5 font-medium"
+                  : ""
               }`}
             >
               Dari Books
             </a>
             <a
-              className={`tab tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] ${
-                dariBooks ? "" : "tab-active text-primary"
+              className={`tab text-secondary tab-lifted text-xs px-[5px] lg:text-base lg:px-[15px] border-secondary ${
+                dariBooks
+                  ? ""
+                  : "tab-active bg-secondary bg-opacity-5 font-medium"
               }`}
             >
               Pashto Books

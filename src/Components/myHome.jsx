@@ -10,21 +10,19 @@ import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 export function MyHome() {
   const dispatch = useDispatch();
   const logged = useSelector((store) => store.isLogged);
-  const user = useSelector((store) => store.user);
   const theme = useSelector((store) => store.theme);
   const navigate = useNavigate();
 
   dispatch(setNav());
   return (
-    <div className="bg-base-100 absolute w-full lg:w-[70vw]">
+    <div className="bg-accent bg-opacity-0 absolute w-full lg:w-[70vw]">
       {!logged ? (
         <div>
           <section>
             <div
               className="hero w-screen min-h-screen"
               style={{
-                backgroundImage:
-                  "url(https://drive.google.com/uc?id=1tyrWLBDIuytCoSt87NtrCLd7rmyEEdJg&export=view)",
+                backgroundImage: "url(/imgs/web/iqraCoverPhoto.jpg)",
               }}
             >
               <div className="hero-overlay bg-opacity-30"></div>
@@ -60,16 +58,7 @@ export function MyHome() {
           <section>
             <div className="hero w-screen min-h-screen">
               <div className="hero-content w-full md:w-10/12 text-neutral-content">
-                <div
-                  className="text-primary bg-cover w-full rounded-3xl shadow-xl my-3 p-9 lg:p-14 bg-accent overflow-x-hidden h-fit"
-                  style={{
-                    backgroundImage: `url(${
-                      theme === "light"
-                        ? `https://drive.google.com/uc?id=192apgQQWQSLy60x-gUMzLWs4b7h_ch2n&export=view`
-                        : `https://drive.google.com/uc?id=1gqE3g5HtYTrBlrMuY5k6uu1dfxFQqur3&export=view`
-                    })`,
-                  }}
-                >
+                <div className="text-primary bg-cover w-full rounded-3xl shadow-xl my-3 p-9 lg:p-14 bg-accent overflow-x-hidden h-fit">
                   <div className="flex items-center justify-center">
                     <p className="text-base md:text-xl">
                       <strong>
@@ -120,37 +109,6 @@ export function MyHome() {
                         <em>read more about us...</em>
                       </a>
                     </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div
-              className="hero w-screen min-h-screen"
-              style={{
-                backgroundImage:
-                  "url(https://drive.google.com/uc?id=1BHD_hchT_odHa0fHjcg1f52HKcbO31vF&export=view)",
-              }}
-            >
-              <div className="hero-overlay bg-opacity-40"></div>
-              <div className="hero-content w-[90vw] md:w-10/12 text-neutral-content">
-                <div className="text-primary w-full rounded-3xl shadow-xl p-9 lg:p-14 bg-accent opacity-90 overflow-x-hidden h-fit">
-                  <h1 className="text-3xl font-medium text-center">
-                    Our Partners
-                  </h1>
-                  <div className="mt-12 flex items-center justify-center">
-                    <a
-                      href="https://omid.edu.af/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <img
-                        alt="Omid Afghanistan"
-                        className="rounded-full w-36 h-36"
-                        src="/imgs/partners/omid-logo.png"
-                      />
-                    </a>
                   </div>
                 </div>
               </div>
@@ -306,33 +264,36 @@ export function MyHome() {
         </div>
       ) : (
         <div className="grid grid-cols-2 m-4 lg:m-11 gap-3 lg:gap-5 lg:max-w-3xl">
-          <a href="/courses">
+          <a href="/class/7">
             <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-secondary bg-accent overflow-x-hidden">
-              <h1 className=" text-xl font-medium">Courses</h1>
+              <h1 className=" text-xl font-medium">Class 7</h1>
             </div>
           </a>
-          <a href="/books">
+          <a href="/class/8">
             <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-secondary bg-accent overflow-x-hidden">
-              <h1 className=" text-xl font-medium">Books</h1>
+              <h1 className=" text-xl font-medium">Class 8</h1>
             </div>
           </a>
-          <a href="/teachers">
+          <a href="/class/9">
             <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-secondary bg-accent overflow-x-hidden">
-              <h1 className="text-xl font-medium">Teachers</h1>
+              <h1 className="text-xl font-medium">Class 9</h1>
             </div>
           </a>
-          <a href="/my-settings">
+          <a href="/class/10">
             <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-secondary bg-accent overflow-x-hidden">
-              <h1 className=" text-xl font-medium">Settings</h1>
+              <h1 className=" text-xl font-medium">Class 10</h1>
             </div>
           </a>
-          {(user.role === "teacher" || user.role === "admin") && (
-            <a href="/create-course">
-              <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-secondary bg-accent overflow-x-hidden">
-                <h1 className=" text-xl font-medium">Create Course</h1>
-              </div>
-            </a>
-          )}
+          <a href="/class/11">
+            <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-secondary bg-accent overflow-x-hidden">
+              <h1 className=" text-xl font-medium">Class 11</h1>
+            </div>
+          </a>
+          <a href="/class/12">
+            <div className="text-primary transition-all card shadow-xl h-28 flex justify-center items-center hover:shadow-none hover:bg-primary hover:opacity-70 hover:text-secondary bg-accent overflow-x-hidden">
+              <h1 className=" text-xl font-medium">Class 12</h1>
+            </div>
+          </a>
         </div>
       )}
     </div>

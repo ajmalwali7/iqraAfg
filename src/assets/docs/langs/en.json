@@ -82,6 +82,7 @@
     "courseVid": "Course Video",
     "class": "Class",
     "subject": "Subject",
+    "chapter": "Chapter",
     "title": "Course Title",
     "description": "Course Description",
     "create": "Create",

@@ -5,7 +5,6 @@ import { Background } from "./background";
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useState } from "react";
 import axios from "axios";
@@ -49,7 +48,7 @@ export function Layout() {
     setVerifTokenSent(true);
     console.log("Verification Sent!");
     await axios
-      .get("https://iqraafg.cyclic.app/api/v1/users/emailverificationtoken", {
+      .get("http://localhost:3000/api/v1/users/emailverificationtoken", {
         headers: {
           Authorization: `Bearer ${document.cookie
             .match("(^|;)\\s*" + "jwt" + "\\s*=\\s*([^;]+)")
@@ -66,14 +65,14 @@ export function Layout() {
       <Navbar />
       <Background />
       {!logged && (
-        <div className="mt-[7vh] lg:mt-[10vh] border-t border-transparent">
+        <div className="mt-[7vh] lg:mt-[10vh] w-screen border-t border-transparent">
           <Outlet />
         </div>
       )}
       {logged && (
         <div className="drawer lg:drawer-open mt-[7vh] lg:mt-[10vh] h-[93vh] lg:h-[90vh]">
           <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-          <div className="drawer-content lg:pl-72 h-fit">
+          <div className="drawer-content lg:pl-72 w-screen h-fit">
             {!user.credentialVerified && verifTokenSent && (
               <div className="flex justify-center">
                 <div className="flex items-center alert alert-success m-1 w-fit h-8 py-0 ">

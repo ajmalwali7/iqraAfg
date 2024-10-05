@@ -121,7 +121,7 @@ export function Signup() {
     setIsLoading(true);
     try {
       const res = await axios.get(
-        `https://iqraafg.cyclic.app/api/v1/users/email/${e.target[4].value.toLowerCase()}`
+        `http://localhost/api/v1/users/email/${e.target[4].value.toLowerCase()}`
       );
       if (res.data.data.user) {
         setIsLoading(false);
@@ -171,10 +171,7 @@ export function Signup() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      await axios.post(
-        "https://iqraafg.cyclic.app/api/v1/users/signup",
-        reqBody
-      );
+      await axios.post("http://localhost/api/v1/users/signup", reqBody);
       setForm3(false);
       setVerifPage(true);
     } catch (err) {

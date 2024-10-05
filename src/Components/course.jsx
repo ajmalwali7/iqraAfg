@@ -11,18 +11,18 @@ export function Course() {
   const user = useSelector((s) => s.user);
   const course = useSelector((s) => s.course);
   const dispatch = useDispatch();
+  const [comment, setComment] = useState(false);
   const [error, setError] = useState(false);
   const [commentError, setCommentError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [noCourse, setNoCourse] = useState(false);
   const handle = useParams();
-
   const handleComment = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     try {
       const res = await axios.post(
-        `https://iqraafg.cyclic.app/api/v1/courses/${course.id}/comments`,
+        `http://localhost:3000/api/v1/courses/${course.id}/comments`,
         { comment: e.target[0].value },
         {
           headers: {
@@ -64,7 +64,7 @@ export function Course() {
   const getCourse = async () => {
     try {
       const res = await axios.get(
-        `https://iqraafg.cyclic.app/api/v1/courses/course/${handle.slug}`
+        `http://localhost:3000/api/v1/courses/course/${handle.slug}`
       );
       dispatch(setCourse(res.data.data.course));
       document.title = `${res.data.data.course.title}: Iqra Afghanistan`;
@@ -81,7 +81,7 @@ export function Course() {
   }, [handle.slug]);
   return (
     <>
-      <div className="flex justify-center mt-10 mb-20">
+      <div className="flex m-10 mb-20">
         {error && (
           <div className="flex flex-col pt-8 gap-y-4 items-center justify-center">
             <div className="flex items-center alert alert-error m-1 w-fit opacity-75">
@@ -146,47 +146,45 @@ export function Course() {
           </div>
         )}
         {course && (
-          <div className="flex flex-col card bg-accent shadow-xl py-7 w-10/12 px-5 gap-3">
+          <div className="flex flex-col card bg-accent shadow-xl py-7 w-full px-5 gap-3">
             <div className="flex flex-col pt-8 gap-y-4 w-full">
-              <div className="flex flex-col gap-y-2">
-                <span className="text-3xl block text-primary-focus font-semibold px-3">
-                  {`${course.title}`[0].toUpperCase() +
-                    `${course.title}`.substring(1) +
-                    ", " +
-                    `${course.subject}`[0].toUpperCase() +
-                    `${course.subject}`.substring(1) +
-                    ", Class " +
-                    course.class +
-                    ": "}
-                </span>
-                <div>
-                  <div className="divider m-0 before:bg-base-200 after:bg-base-200 before:opacity-30 after:opacity-30"></div>
-                  <div className="flex flex-row p-0">
-                    <span className="block text-sm text-primary-focus px-3">
-                      Teacher:{" "}
-                      {`${course.teacher.firstName}`[0].toUpperCase() +
-                        `${course.teacher.firstName}`.substring(1) +
-                        " " +
-                        `${course.teacher.lastName}`[0].toUpperCase() +
-                        `${course.teacher.lastName}`.substring(1)}
-                    </span>
-                    <span className="block text-sm text-primary-focus px-3">
-                      Created At: {course.createdAt.split("T")[0]}
-                    </span>
-                  </div>
-                  <div className="divider m-0 before:bg-base-200 after:bg-base-200 before:opacity-30 after:opacity-30"></div>
+              <p className="text-3xl block text-primary-focus font-semibold px-3">
+                {`${course.title}`[0].toUpperCase() +
+                  `${course.title}`.substring(1) +
+                  ", " +
+                  `${course.subject}`[0].toUpperCase() +
+                  `${course.subject}`.substring(1) +
+                  ", Class " +
+                  course.class +
+                  ": "}
+              </p>
+              <div>
+                <div className="divider m-0 before:bg-base-200 after:bg-base-200 before:opacity-30 after:opacity-30"></div>
+                <div className="flex flex-row p-0">
+                  <p className="block text-sm text-primary-focus px-3">
+                    Teacher:{" "}
+                    {`${course.teacher.firstName}`[0].toUpperCase() +
+                      `${course.teacher.firstName}`.substring(1) +
+                      " " +
+                      `${course.teacher.lastName}`[0].toUpperCase() +
+                      `${course.teacher.lastName}`.substring(1)}
+                  </p>
+                  <p className="block text-sm text-primary-focus px-3">
+                    Created At: {course.createdAt.split("T")[0]}
+                  </p>
                 </div>
-                <span className="text-lg block text-primary-focus px-3">
-                  {`${course.description}`[0].toUpperCase() +
-                    `${course.description}`.substring(1)}
-                </span>
-                {course.videoLink && (
-                  <iframe
-                    src={`${course.videoLink}`}
-                    className="h-[500px] w-auto rounded-xl mt-5"
-                  />
-                )}
+                <div className="divider m-0 before:bg-base-200 after:bg-base-200 before:opacity-30 after:opacity-30"></div>
               </div>
+              <p className="text-lg text-primary-focus px-3 break-words">
+                {`${course.description}`[0].toUpperCase() +
+                  `${course.description}`.substring(1)}
+              </p>
+              {course.videoLink && (
+                <iframe
+                  src={`${course.videoLink}`}
+                  className="h-[500px] w-auto rounded-xl mt-5"
+                />
+              )}
             </div>
             <div className="flex flex-col mt-10">
               <label className="text-sm block text-primary-focus px-3">
@@ -207,9 +205,9 @@ export function Course() {
                       d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <span>
+                  <p>
                     An Error Occurred Posting the Comment, Please Try Again!
-                  </span>
+                  </p>
                 </div>
               )}
               <div className="flex flex-row gap-3 px-5 pt-7 pb-10 rounded-md">
@@ -231,13 +229,20 @@ export function Course() {
                   <input
                     type="text"
                     required
+                    onChange={(e) => {
+                      if (e.target.value.length > 0) {
+                        setComment(true);
+                      } else {
+                        setComment(false);
+                      }
+                    }}
                     placeholder="Add Comment Here..."
-                    className="input input-bordered w-full focus:outline-none focus:ring-2 focus:text-primary-focus text-neutral-500"
+                    className="input bg-accent input-bordered w-full focus:outline-none focus:ring-2 focus:text-primary-focus text-neutral-500"
                   />
                   <button
                     type="submit"
-                    disabled={isLoading}
-                    className="btn btn-outline btn-primary w-20 rounded-lg disabled:btn-primary disabled:opacity-80"
+                    disabled={isLoading || !comment}
+                    className="btn btn-outline btn-primary w-20 rounded-lg disabled:opacity-80 disabled:text-white"
                   >
                     {isLoading ? (
                       <span className="loading loading-dots loading-md"></span>

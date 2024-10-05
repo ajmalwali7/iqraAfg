@@ -12,6 +12,6 @@ export const deleteCourse = (payload) => ({ type: "del", payload });
 export const setNav = () => ({ type: "nav" });
 export const noNav = () => ({ type: "noNav" });
 export const setCourses = (payload) => ({ type: "courses", payload });
-export const deleteCourses = (payload) => ({ type: "dek", payload });
+export const deleteCourses = (payload) => ({ type: "del", payload });
 export const setTeachers = (payload) => ({ type: "teachers", payload });
 export const deleteTeachers = (payload) => ({ type: "del", payload });
